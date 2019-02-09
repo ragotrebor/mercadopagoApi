@@ -1,0 +1,1099 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05936AA87BD7B221E5E9CC15968FA816 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321A5CD0DB6D2464B4A61E7B564381A7 /* EventMonitor.swift */; };
+		08B22638D9BC38AF4EBF86B87728BBC3 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECC2E203B89F4BC1BA0E5823213B2B1 /* Result.swift */; };
+		0A40559E0B3BB081B5BFF1AA49C20BE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89DC365FEF314CAE9760892B813E187E /* Foundation.framework */; };
+		13DD1F2E840B579AA94B87B393A474E2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6757C44D1A8B62FD3A7062E345EA7F6 /* CFNetwork.framework */; };
+		147F18C2443A0D67CFB2DC7BBF773A53 /* URLConvertible+URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0B6546F4D22959BDAEA07EA2B79C3C /* URLConvertible+URLRequestConvertible.swift */; };
+		15B0CCB36B47418C135A11480513C386 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB7A3080A9E4D575E9E33B20F660697 /* MultipartFormData.swift */; };
+		1CD7827D284E3013FE193E60A3367013 /* Pods-mercadopagoApi-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DF626CBFB22EF1E4560DFB2C6CE81B16 /* Pods-mercadopagoApi-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21709DFC94EF18DCD9A3ACBF1DCA51D7 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C142A26293D6E863D56E0CE3B4B17F1 /* DispatchQueue+Alamofire.swift */; };
+		2250C6B76F88EA76613F48DE92B53484 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD45691545031B7851C00A4A2B1AF6 /* Notifications.swift */; };
+		225EF955813501005F486AE97AF89D3A /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB6D732664C40FD69C1C3E8A4F27955 /* Alamofire-dummy.m */; };
+		297DA79C68773FD3DE476AFDC82F965A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89DC365FEF314CAE9760892B813E187E /* Foundation.framework */; };
+		2B8CEAA58A236B9717B54F535CD5B0E7 /* RetryPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04675DDA6802EE7AF71D967825AD7C61 /* RetryPolicy.swift */; };
+		2F3E6F1E30BEE8509966020065B38A29 /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC6B613CA70570DD5F7E63C397C08D9 /* RequestTaskMap.swift */; };
+		31BE8CEA7A5AC3856B7F11ED4AEA6B9E /* URLSessionConfiguration+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = F759C736F0861252FCFF5CB0561B5602 /* URLSessionConfiguration+Alamofire.swift */; };
+		328B023668B22A66C2D7891B9461CDD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89DC365FEF314CAE9760892B813E187E /* Foundation.framework */; };
+		3332D2408577C46976560AD10DFBD719 /* Pods-mercadopagoApiTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ADBE27522D0DE40977ECE115FF07FA8E /* Pods-mercadopagoApiTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34BC26878CE04E69A78FD574508DF53E /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B722E52DD9FDBA0F58853D0143791 /* RequestInterceptor.swift */; };
+		3713AED287D401D7827FAC1DE226E39B /* Pods-mercadopagoApiUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6A99B0133DD7A8F083C366A3C2BC9FA /* Pods-mercadopagoApiUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A7D037EC14605BC76296A4E3C5CCDFF /* Pods-mercadopagoApiTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 344F81B05CF1505649384DFC0542738B /* Pods-mercadopagoApiTests-dummy.m */; };
+		4EBF2AC70926C505E62DD101EFA4A7B2 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F9BFF2933660179FE75A6158686538 /* AFError.swift */; };
+		4F7B7036784497537BF56B3608136CE2 /* Pods-mercadopagoApiUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E100A79C78B17C0CEE77835F9BFA69 /* Pods-mercadopagoApiUITests-dummy.m */; };
+		7727CF14950FF3C560BEFDEEA79FEA71 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F1C3BD2107E017A7A54F53510C7B3 /* Validation.swift */; };
+		85402F2906BB7F8D77471CEEC7BD7206 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDE1DCE7319BC4A0929CB7B1A03B8D /* Request.swift */; };
+		85DC4F70068D19B92FDC68E91ED8028E /* CachedResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC6CC3BA745F311DB182E3E5DF64F2D /* CachedResponseHandler.swift */; };
+		87EEBE8CBC48E93010E356D29D32D5BC /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC067D7770891D6C1D4EA85FAC4A28 /* Session.swift */; };
+		8E3A4EF81F4C48518220A2196D598D06 /* MultipartUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ED35CCAE73C743250A4A2975E1A36A /* MultipartUpload.swift */; };
+		93AF4754F09FE4D58135B663AA167986 /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671EF730579325B16FBAB058FBA96900 /* HTTPHeaders.swift */; };
+		A13234B0BE7D9C12FC39CCF82026D359 /* OperationQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DDF92E61D4DFF721D7384A6CDD2AEA /* OperationQueue+Alamofire.swift */; };
+		A572C2AD8E7BC66ACB7C1E80A306452A /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4975232F05F3897361AF34A17B4C6939 /* RedirectHandler.swift */; };
+		A72FBFA6880118C3FF429A6F10ADB69A /* Pods-mercadopagoApi-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9A52C443C168BC49AA3120782DD388 /* Pods-mercadopagoApi-dummy.m */; };
+		C1DF652DAFCD450EEBD548FB1830690F /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39957F9F99705768BFB712263B8B229F /* Alamofire.swift */; };
+		D0E5743B4CDEEE6B02C81D05B845B03D /* ServerTrustEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2E8731BC46F7C260DA5448F7ABB74 /* ServerTrustEvaluation.swift */; };
+		D2BCAF505FD4DB8FA8F66B714B60C684 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB966D1DCBFAB07C41C76B93F66E0B79 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4025536C7720A1C899676E2844A6B49 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEB8603837304C760B1F5ADCC725F61 /* Response.swift */; };
+		D532FF857AE53A51A6823EA67D2A022F /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBECD28EF0B8E1518721519F1061E6C /* ParameterEncoding.swift */; };
+		DDEC53C757BD5571075C799C8B52F537 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9FE76CDE4CEFE3D30FA9440CC72B50 /* ResponseSerialization.swift */; };
+		DE36396DC76058B093D10A23A80521E3 /* Protector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397617A7935DECEFE2D2511377615D27 /* Protector.swift */; };
+		E2C4D8407924AF1146FF06C7A18F89FD /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AC2530EA4FCF1EBA296DD32D9AFFDA /* ParameterEncoder.swift */; };
+		EDC90751F648F38E91448E3C51F1025A /* URLRequest+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C5FEFE4DC4565D94241E20F9C8D53F /* URLRequest+Alamofire.swift */; };
+		F3DCFDFED3C57DAB64BC05D4C83B75EF /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914BB7476B7C86153A27FF147973A72 /* HTTPMethod.swift */; };
+		F5BD437D8BCC8F3351B5FA196266EAA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89DC365FEF314CAE9760892B813E187E /* Foundation.framework */; };
+		F8DB96E436B42D8C0AC6F87F6E34DC0F /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C90AE7EB0F92BBF088475D34FE11EB3 /* NetworkReachabilityManager.swift */; };
+		FE00FC6BF2BDB5DA1B24609F89E840EE /* SessionStateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4784E60366F2B2929B548AC63CC30305 /* SessionStateProvider.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A3C9CD86E5985034141B24397810F20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23241DE78D9B885662D9C0B4E4416306;
+			remoteInfo = "Pods-mercadopagoApi";
+		};
+		407CCC74712864F9A75FD03C9F4B522C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23241DE78D9B885662D9C0B4E4416306;
+			remoteInfo = "Pods-mercadopagoApi";
+		};
+		6608D6DB5293AA36F95D5093C4672BE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B3A7BCCABAE83232F14C87C5CE350FC;
+			remoteInfo = Alamofire;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		045F2F0E2FEE7A65A7C1B6BF68F2B4F7 /* Pods-mercadopagoApi.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-mercadopagoApi.modulemap"; sourceTree = "<group>"; };
+		04675DDA6802EE7AF71D967825AD7C61 /* RetryPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryPolicy.swift; path = Source/RetryPolicy.swift; sourceTree = "<group>"; };
+		0A955B029027AE8C86609BC9C53195CA /* Pods-mercadopagoApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mercadopagoApi.debug.xcconfig"; sourceTree = "<group>"; };
+		0BF14A5A7E92900C5B85D919D6E38870 /* Pods-mercadopagoApiTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mercadopagoApiTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		10ED35CCAE73C743250A4A2975E1A36A /* MultipartUpload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartUpload.swift; path = Source/MultipartUpload.swift; sourceTree = "<group>"; };
+		1BF2E8731BC46F7C260DA5448F7ABB74 /* ServerTrustEvaluation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustEvaluation.swift; path = Source/ServerTrustEvaluation.swift; sourceTree = "<group>"; };
+		1C142A26293D6E863D56E0CE3B4B17F1 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		1C90AE7EB0F92BBF088475D34FE11EB3 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		1FC6B613CA70570DD5F7E63C397C08D9 /* RequestTaskMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestTaskMap.swift; path = Source/RequestTaskMap.swift; sourceTree = "<group>"; };
+		289352C11B71EF8FFC08C10C0E4102A3 /* Pods-mercadopagoApiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mercadopagoApiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		321A5CD0DB6D2464B4A61E7B564381A7 /* EventMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventMonitor.swift; path = Source/EventMonitor.swift; sourceTree = "<group>"; };
+		344F81B05CF1505649384DFC0542738B /* Pods-mercadopagoApiTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-mercadopagoApiTests-dummy.m"; sourceTree = "<group>"; };
+		3914BB7476B7C86153A27FF147973A72 /* HTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Source/HTTPMethod.swift; sourceTree = "<group>"; };
+		397617A7935DECEFE2D2511377615D27 /* Protector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protector.swift; path = Source/Protector.swift; sourceTree = "<group>"; };
+		39957F9F99705768BFB712263B8B229F /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		3D2F1C3BD2107E017A7A54F53510C7B3 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		3F6670949E568134130225A2839F4B0F /* Pods-mercadopagoApiUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mercadopagoApiUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		43D6E278D3ABC6C0DDC3163A36863E59 /* Pods-mercadopagoApiUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-mercadopagoApiUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4784E60366F2B2929B548AC63CC30305 /* SessionStateProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionStateProvider.swift; path = Source/SessionStateProvider.swift; sourceTree = "<group>"; };
+		4975232F05F3897361AF34A17B4C6939 /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Source/RedirectHandler.swift; sourceTree = "<group>"; };
+		4C2FD00ADAE502D36EF7B2691651BF8D /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
+		4CF780E948F183BB8C27A232F3825616 /* Pods-mercadopagoApiTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-mercadopagoApiTests.modulemap"; sourceTree = "<group>"; };
+		4EC6CC3BA745F311DB182E3E5DF64F2D /* CachedResponseHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CachedResponseHandler.swift; path = Source/CachedResponseHandler.swift; sourceTree = "<group>"; };
+		56AC2530EA4FCF1EBA296DD32D9AFFDA /* ParameterEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoder.swift; path = Source/ParameterEncoder.swift; sourceTree = "<group>"; };
+		5E17109DC3DAF90C1B1115FBE71BC6C9 /* Pods-mercadopagoApiUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-mercadopagoApiUITests.modulemap"; sourceTree = "<group>"; };
+		671EF730579325B16FBAB058FBA96900 /* HTTPHeaders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPHeaders.swift; path = Source/HTTPHeaders.swift; sourceTree = "<group>"; };
+		68C42A1E4D6D12DBFDDBDF306564BD9F /* Pods-mercadopagoApiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mercadopagoApiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6BEDE1DCE7319BC4A0929CB7B1A03B8D /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		6CB6D732664C40FD69C1C3E8A4F27955 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		6DFB73D6FBB3811669493C518DF06EFD /* Pods-mercadopagoApi-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mercadopagoApi-acknowledgements.plist"; sourceTree = "<group>"; };
+		6F996ACE26A589E64383D2AE20C22C40 /* Pods_mercadopagoApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_mercadopagoApi.framework; path = "Pods-mercadopagoApi.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		73E100A79C78B17C0CEE77835F9BFA69 /* Pods-mercadopagoApiUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-mercadopagoApiUITests-dummy.m"; sourceTree = "<group>"; };
+		78F2C42202D986FD27E200A837418199 /* Pods-mercadopagoApiUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mercadopagoApiUITests-Info.plist"; sourceTree = "<group>"; };
+		78F9BFF2933660179FE75A6158686538 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		7A4F79D17BC497A8F11CBECE5475ACC6 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CB7A3080A9E4D575E9E33B20F660697 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		7EBECD28EF0B8E1518721519F1061E6C /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		8717AF92470CE64D1E7111B292CEAACC /* Pods-mercadopagoApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mercadopagoApi.release.xcconfig"; sourceTree = "<group>"; };
+		8845AB132FF84054E31A118BD6F96A4A /* Pods-mercadopagoApi-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-mercadopagoApi-acknowledgements.markdown"; sourceTree = "<group>"; };
+		89DC365FEF314CAE9760892B813E187E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		98DE581D953D55EE488B507688C34F85 /* Pods-mercadopagoApi-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mercadopagoApi-Info.plist"; sourceTree = "<group>"; };
+		99336550CA704B8E35E5432ADF385A10 /* Pods_mercadopagoApiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_mercadopagoApiTests.framework; path = "Pods-mercadopagoApiTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		997C43F12D84AC502F5E336EAF9EBD57 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		9D9A52C443C168BC49AA3120782DD388 /* Pods-mercadopagoApi-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-mercadopagoApi-dummy.m"; sourceTree = "<group>"; };
+		ACCC695A8BAC2DB0784260FDD491FCFB /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		ADBE27522D0DE40977ECE115FF07FA8E /* Pods-mercadopagoApiTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-mercadopagoApiTests-umbrella.h"; sourceTree = "<group>"; };
+		AEBD45691545031B7851C00A4A2B1AF6 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		AECC2E203B89F4BC1BA0E5823213B2B1 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		B1C5FEFE4DC4565D94241E20F9C8D53F /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
+		B3CC067D7770891D6C1D4EA85FAC4A28 /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Source/Session.swift; sourceTree = "<group>"; };
+		B3DDF92E61D4DFF721D7384A6CDD2AEA /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OperationQueue+Alamofire.swift"; path = "Source/OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		B84FDE1DB8C441211D6E165CDC343C72 /* Pods-mercadopagoApiTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mercadopagoApiTests-Info.plist"; sourceTree = "<group>"; };
+		BE9FE76CDE4CEFE3D30FA9440CC72B50 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		C6757C44D1A8B62FD3A7062E345EA7F6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		CCEB8603837304C760B1F5ADCC725F61 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		D585C73CD25139A58FB4657726B390AE /* Pods-mercadopagoApiTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-mercadopagoApiTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D6A99B0133DD7A8F083C366A3C2BC9FA /* Pods-mercadopagoApiUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-mercadopagoApiUITests-umbrella.h"; sourceTree = "<group>"; };
+		D90B722E52DD9FDBA0F58853D0143791 /* RequestInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestInterceptor.swift; path = Source/RequestInterceptor.swift; sourceTree = "<group>"; };
+		DCCB4E50CFDCA1CAB9854F660FD7F555 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		DF626CBFB22EF1E4560DFB2C6CE81B16 /* Pods-mercadopagoApi-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-mercadopagoApi-umbrella.h"; sourceTree = "<group>"; };
+		E408B137770ADE13A9A5100D7586D973 /* Pods-mercadopagoApiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mercadopagoApiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EB966D1DCBFAB07C41C76B93F66E0B79 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		EFA10840CCE18CF5AF71EE1E16171DAE /* Pods-mercadopagoApiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mercadopagoApiTests.release.xcconfig"; sourceTree = "<group>"; };
+		F759C736F0861252FCFF5CB0561B5602 /* URLSessionConfiguration+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLSessionConfiguration+Alamofire.swift"; path = "Source/URLSessionConfiguration+Alamofire.swift"; sourceTree = "<group>"; };
+		FEDBD339F1FB3CAB17D9AD5A227AAA1D /* Pods-mercadopagoApi-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-mercadopagoApi-frameworks.sh"; sourceTree = "<group>"; };
+		FF0B6546F4D22959BDAEA07EA2B79C3C /* URLConvertible+URLRequestConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLConvertible+URLRequestConvertible.swift"; path = "Source/URLConvertible+URLRequestConvertible.swift"; sourceTree = "<group>"; };
+		FFC09F4AD3828CF0203F1DBB82A622CB /* Pods_mercadopagoApiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_mercadopagoApiUITests.framework; path = "Pods-mercadopagoApiUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		24DF03D121F796C7E960A1420E87EB63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A40559E0B3BB081B5BFF1AA49C20BE0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		769B46D5CE0372B1FC240480D9B9256E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5BD437D8BCC8F3351B5FA196266EAA5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93EDC540DDD1E1D399A519904DAEDE06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13DD1F2E840B579AA94B87B393A474E2 /* CFNetwork.framework in Frameworks */,
+				328B023668B22A66C2D7891B9461CDD5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B642FACD860EF6969937B2956FA1125C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				297DA79C68773FD3DE476AFDC82F965A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		238EEE6288344756F18FB967837CE027 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C76B58E54C2D8009A03D6A81A797C62C /* Alamofire */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		36CE00A8A893A326BE1FB32120722843 /* Pods-mercadopagoApiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5E17109DC3DAF90C1B1115FBE71BC6C9 /* Pods-mercadopagoApiUITests.modulemap */,
+				43D6E278D3ABC6C0DDC3163A36863E59 /* Pods-mercadopagoApiUITests-acknowledgements.markdown */,
+				3F6670949E568134130225A2839F4B0F /* Pods-mercadopagoApiUITests-acknowledgements.plist */,
+				73E100A79C78B17C0CEE77835F9BFA69 /* Pods-mercadopagoApiUITests-dummy.m */,
+				78F2C42202D986FD27E200A837418199 /* Pods-mercadopagoApiUITests-Info.plist */,
+				D6A99B0133DD7A8F083C366A3C2BC9FA /* Pods-mercadopagoApiUITests-umbrella.h */,
+				289352C11B71EF8FFC08C10C0E4102A3 /* Pods-mercadopagoApiUITests.debug.xcconfig */,
+				E408B137770ADE13A9A5100D7586D973 /* Pods-mercadopagoApiUITests.release.xcconfig */,
+			);
+			name = "Pods-mercadopagoApiUITests";
+			path = "Target Support Files/Pods-mercadopagoApiUITests";
+			sourceTree = "<group>";
+		};
+		3C0F2C17552DFC3CA841DF363AA25E74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A4F79D17BC497A8F11CBECE5475ACC6 /* Alamofire.framework */,
+				6F996ACE26A589E64383D2AE20C22C40 /* Pods_mercadopagoApi.framework */,
+				99336550CA704B8E35E5432ADF385A10 /* Pods_mercadopagoApiTests.framework */,
+				FFC09F4AD3828CF0203F1DBB82A622CB /* Pods_mercadopagoApiUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D52304B3F0670EE0236B3F34A532CB30 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4986728C5389D9DFA9BA3746D4B45496 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				78A965DB8ACD377D748587782542ACC6 /* Pods-mercadopagoApi */,
+				88524B3DE52CEB47365BF50347E58E77 /* Pods-mercadopagoApiTests */,
+				36CE00A8A893A326BE1FB32120722843 /* Pods-mercadopagoApiUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		78A965DB8ACD377D748587782542ACC6 /* Pods-mercadopagoApi */ = {
+			isa = PBXGroup;
+			children = (
+				045F2F0E2FEE7A65A7C1B6BF68F2B4F7 /* Pods-mercadopagoApi.modulemap */,
+				8845AB132FF84054E31A118BD6F96A4A /* Pods-mercadopagoApi-acknowledgements.markdown */,
+				6DFB73D6FBB3811669493C518DF06EFD /* Pods-mercadopagoApi-acknowledgements.plist */,
+				9D9A52C443C168BC49AA3120782DD388 /* Pods-mercadopagoApi-dummy.m */,
+				FEDBD339F1FB3CAB17D9AD5A227AAA1D /* Pods-mercadopagoApi-frameworks.sh */,
+				98DE581D953D55EE488B507688C34F85 /* Pods-mercadopagoApi-Info.plist */,
+				DF626CBFB22EF1E4560DFB2C6CE81B16 /* Pods-mercadopagoApi-umbrella.h */,
+				0A955B029027AE8C86609BC9C53195CA /* Pods-mercadopagoApi.debug.xcconfig */,
+				8717AF92470CE64D1E7111B292CEAACC /* Pods-mercadopagoApi.release.xcconfig */,
+			);
+			name = "Pods-mercadopagoApi";
+			path = "Target Support Files/Pods-mercadopagoApi";
+			sourceTree = "<group>";
+		};
+		7CF80F48262D6BD255E80FB486208570 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACCC695A8BAC2DB0784260FDD491FCFB /* Alamofire.modulemap */,
+				DCCB4E50CFDCA1CAB9854F660FD7F555 /* Alamofire.xcconfig */,
+				6CB6D732664C40FD69C1C3E8A4F27955 /* Alamofire-dummy.m */,
+				4C2FD00ADAE502D36EF7B2691651BF8D /* Alamofire-Info.plist */,
+				997C43F12D84AC502F5E336EAF9EBD57 /* Alamofire-prefix.pch */,
+				EB966D1DCBFAB07C41C76B93F66E0B79 /* Alamofire-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				238EEE6288344756F18FB967837CE027 /* Pods */,
+				3C0F2C17552DFC3CA841DF363AA25E74 /* Products */,
+				4986728C5389D9DFA9BA3746D4B45496 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		88524B3DE52CEB47365BF50347E58E77 /* Pods-mercadopagoApiTests */ = {
+			isa = PBXGroup;
+			children = (
+				4CF780E948F183BB8C27A232F3825616 /* Pods-mercadopagoApiTests.modulemap */,
+				D585C73CD25139A58FB4657726B390AE /* Pods-mercadopagoApiTests-acknowledgements.markdown */,
+				0BF14A5A7E92900C5B85D919D6E38870 /* Pods-mercadopagoApiTests-acknowledgements.plist */,
+				344F81B05CF1505649384DFC0542738B /* Pods-mercadopagoApiTests-dummy.m */,
+				B84FDE1DB8C441211D6E165CDC343C72 /* Pods-mercadopagoApiTests-Info.plist */,
+				ADBE27522D0DE40977ECE115FF07FA8E /* Pods-mercadopagoApiTests-umbrella.h */,
+				68C42A1E4D6D12DBFDDBDF306564BD9F /* Pods-mercadopagoApiTests.debug.xcconfig */,
+				EFA10840CCE18CF5AF71EE1E16171DAE /* Pods-mercadopagoApiTests.release.xcconfig */,
+			);
+			name = "Pods-mercadopagoApiTests";
+			path = "Target Support Files/Pods-mercadopagoApiTests";
+			sourceTree = "<group>";
+		};
+		C76B58E54C2D8009A03D6A81A797C62C /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				78F9BFF2933660179FE75A6158686538 /* AFError.swift */,
+				39957F9F99705768BFB712263B8B229F /* Alamofire.swift */,
+				4EC6CC3BA745F311DB182E3E5DF64F2D /* CachedResponseHandler.swift */,
+				1C142A26293D6E863D56E0CE3B4B17F1 /* DispatchQueue+Alamofire.swift */,
+				321A5CD0DB6D2464B4A61E7B564381A7 /* EventMonitor.swift */,
+				671EF730579325B16FBAB058FBA96900 /* HTTPHeaders.swift */,
+				3914BB7476B7C86153A27FF147973A72 /* HTTPMethod.swift */,
+				7CB7A3080A9E4D575E9E33B20F660697 /* MultipartFormData.swift */,
+				10ED35CCAE73C743250A4A2975E1A36A /* MultipartUpload.swift */,
+				1C90AE7EB0F92BBF088475D34FE11EB3 /* NetworkReachabilityManager.swift */,
+				AEBD45691545031B7851C00A4A2B1AF6 /* Notifications.swift */,
+				B3DDF92E61D4DFF721D7384A6CDD2AEA /* OperationQueue+Alamofire.swift */,
+				56AC2530EA4FCF1EBA296DD32D9AFFDA /* ParameterEncoder.swift */,
+				7EBECD28EF0B8E1518721519F1061E6C /* ParameterEncoding.swift */,
+				397617A7935DECEFE2D2511377615D27 /* Protector.swift */,
+				4975232F05F3897361AF34A17B4C6939 /* RedirectHandler.swift */,
+				6BEDE1DCE7319BC4A0929CB7B1A03B8D /* Request.swift */,
+				D90B722E52DD9FDBA0F58853D0143791 /* RequestInterceptor.swift */,
+				1FC6B613CA70570DD5F7E63C397C08D9 /* RequestTaskMap.swift */,
+				CCEB8603837304C760B1F5ADCC725F61 /* Response.swift */,
+				BE9FE76CDE4CEFE3D30FA9440CC72B50 /* ResponseSerialization.swift */,
+				AECC2E203B89F4BC1BA0E5823213B2B1 /* Result.swift */,
+				04675DDA6802EE7AF71D967825AD7C61 /* RetryPolicy.swift */,
+				1BF2E8731BC46F7C260DA5448F7ABB74 /* ServerTrustEvaluation.swift */,
+				B3CC067D7770891D6C1D4EA85FAC4A28 /* Session.swift */,
+				4784E60366F2B2929B548AC63CC30305 /* SessionStateProvider.swift */,
+				FF0B6546F4D22959BDAEA07EA2B79C3C /* URLConvertible+URLRequestConvertible.swift */,
+				B1C5FEFE4DC4565D94241E20F9C8D53F /* URLRequest+Alamofire.swift */,
+				F759C736F0861252FCFF5CB0561B5602 /* URLSessionConfiguration+Alamofire.swift */,
+				3D2F1C3BD2107E017A7A54F53510C7B3 /* Validation.swift */,
+				7CF80F48262D6BD255E80FB486208570 /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		D52304B3F0670EE0236B3F34A532CB30 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C6757C44D1A8B62FD3A7062E345EA7F6 /* CFNetwork.framework */,
+				89DC365FEF314CAE9760892B813E187E /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		319F98D35B5F9D9F0C05DA72E5ED5692 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3332D2408577C46976560AD10DFBD719 /* Pods-mercadopagoApiTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		648687BDBCEE0DF2DA6824250012CB97 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2BCAF505FD4DB8FA8F66B714B60C684 /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		796B53F56A7D5565D4A2BFA391D8E0A2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CD7827D284E3013FE193E60A3367013 /* Pods-mercadopagoApi-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E79E34BEC8069E516A53B44B19880E15 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3713AED287D401D7827FAC1DE226E39B /* Pods-mercadopagoApiUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		23241DE78D9B885662D9C0B4E4416306 /* Pods-mercadopagoApi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD91F23D065B45BFC2C5E0C8B0945C4F /* Build configuration list for PBXNativeTarget "Pods-mercadopagoApi" */;
+			buildPhases = (
+				796B53F56A7D5565D4A2BFA391D8E0A2 /* Headers */,
+				4012742A64CF852DECBC56FB1E1D1149 /* Sources */,
+				769B46D5CE0372B1FC240480D9B9256E /* Frameworks */,
+				FC93882C495F180639DF428C8685C113 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				396ED92CDA2FBFE420DA0241D4111795 /* PBXTargetDependency */,
+			);
+			name = "Pods-mercadopagoApi";
+			productName = "Pods-mercadopagoApi";
+			productReference = 6F996ACE26A589E64383D2AE20C22C40 /* Pods_mercadopagoApi.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5B3A7BCCABAE83232F14C87C5CE350FC /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B9F94E9E5D489B946D59A52937661A2 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				648687BDBCEE0DF2DA6824250012CB97 /* Headers */,
+				0B8DD20304BF39C11E693D24E72857A4 /* Sources */,
+				93EDC540DDD1E1D399A519904DAEDE06 /* Frameworks */,
+				DF3C4C9348ECDE86097300769816FD07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 7A4F79D17BC497A8F11CBECE5475ACC6 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5FE7A98B47E2161A13813665CDF65957 /* Pods-mercadopagoApiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E05E45FA36DC1780911E8F2BA5E612C8 /* Build configuration list for PBXNativeTarget "Pods-mercadopagoApiUITests" */;
+			buildPhases = (
+				E79E34BEC8069E516A53B44B19880E15 /* Headers */,
+				3C4EAE3C264477BF7D7DADC22F86866C /* Sources */,
+				24DF03D121F796C7E960A1420E87EB63 /* Frameworks */,
+				D459C32DB59DEB689A0A459D8273AFD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A61F3FCAEC7B6AE602E7F9773FDBF03F /* PBXTargetDependency */,
+			);
+			name = "Pods-mercadopagoApiUITests";
+			productName = "Pods-mercadopagoApiUITests";
+			productReference = FFC09F4AD3828CF0203F1DBB82A622CB /* Pods_mercadopagoApiUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CEF6972FED086AA8ED24FBD0F08F4E36 /* Pods-mercadopagoApiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CB3AD1A0037A8BCBB854BCDF10FBCAF /* Build configuration list for PBXNativeTarget "Pods-mercadopagoApiTests" */;
+			buildPhases = (
+				319F98D35B5F9D9F0C05DA72E5ED5692 /* Headers */,
+				3DB95D40AD328DFBF8C57F67968FE0F0 /* Sources */,
+				B642FACD860EF6969937B2956FA1125C /* Frameworks */,
+				F05F573BA9C46A9139FCF4659E7AD0FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2156EF5A672C34244E6CA91F5AA1DBB /* PBXTargetDependency */,
+			);
+			name = "Pods-mercadopagoApiTests";
+			productName = "Pods-mercadopagoApiTests";
+			productReference = 99336550CA704B8E35E5432ADF385A10 /* Pods_mercadopagoApiTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 3C0F2C17552DFC3CA841DF363AA25E74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B3A7BCCABAE83232F14C87C5CE350FC /* Alamofire */,
+				23241DE78D9B885662D9C0B4E4416306 /* Pods-mercadopagoApi */,
+				CEF6972FED086AA8ED24FBD0F08F4E36 /* Pods-mercadopagoApiTests */,
+				5FE7A98B47E2161A13813665CDF65957 /* Pods-mercadopagoApiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D459C32DB59DEB689A0A459D8273AFD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF3C4C9348ECDE86097300769816FD07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F05F573BA9C46A9139FCF4659E7AD0FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC93882C495F180639DF428C8685C113 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B8DD20304BF39C11E693D24E72857A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EBF2AC70926C505E62DD101EFA4A7B2 /* AFError.swift in Sources */,
+				225EF955813501005F486AE97AF89D3A /* Alamofire-dummy.m in Sources */,
+				C1DF652DAFCD450EEBD548FB1830690F /* Alamofire.swift in Sources */,
+				85DC4F70068D19B92FDC68E91ED8028E /* CachedResponseHandler.swift in Sources */,
+				21709DFC94EF18DCD9A3ACBF1DCA51D7 /* DispatchQueue+Alamofire.swift in Sources */,
+				05936AA87BD7B221E5E9CC15968FA816 /* EventMonitor.swift in Sources */,
+				93AF4754F09FE4D58135B663AA167986 /* HTTPHeaders.swift in Sources */,
+				F3DCFDFED3C57DAB64BC05D4C83B75EF /* HTTPMethod.swift in Sources */,
+				15B0CCB36B47418C135A11480513C386 /* MultipartFormData.swift in Sources */,
+				8E3A4EF81F4C48518220A2196D598D06 /* MultipartUpload.swift in Sources */,
+				F8DB96E436B42D8C0AC6F87F6E34DC0F /* NetworkReachabilityManager.swift in Sources */,
+				2250C6B76F88EA76613F48DE92B53484 /* Notifications.swift in Sources */,
+				A13234B0BE7D9C12FC39CCF82026D359 /* OperationQueue+Alamofire.swift in Sources */,
+				E2C4D8407924AF1146FF06C7A18F89FD /* ParameterEncoder.swift in Sources */,
+				D532FF857AE53A51A6823EA67D2A022F /* ParameterEncoding.swift in Sources */,
+				DE36396DC76058B093D10A23A80521E3 /* Protector.swift in Sources */,
+				A572C2AD8E7BC66ACB7C1E80A306452A /* RedirectHandler.swift in Sources */,
+				85402F2906BB7F8D77471CEEC7BD7206 /* Request.swift in Sources */,
+				34BC26878CE04E69A78FD574508DF53E /* RequestInterceptor.swift in Sources */,
+				2F3E6F1E30BEE8509966020065B38A29 /* RequestTaskMap.swift in Sources */,
+				D4025536C7720A1C899676E2844A6B49 /* Response.swift in Sources */,
+				DDEC53C757BD5571075C799C8B52F537 /* ResponseSerialization.swift in Sources */,
+				08B22638D9BC38AF4EBF86B87728BBC3 /* Result.swift in Sources */,
+				2B8CEAA58A236B9717B54F535CD5B0E7 /* RetryPolicy.swift in Sources */,
+				D0E5743B4CDEEE6B02C81D05B845B03D /* ServerTrustEvaluation.swift in Sources */,
+				87EEBE8CBC48E93010E356D29D32D5BC /* Session.swift in Sources */,
+				FE00FC6BF2BDB5DA1B24609F89E840EE /* SessionStateProvider.swift in Sources */,
+				147F18C2443A0D67CFB2DC7BBF773A53 /* URLConvertible+URLRequestConvertible.swift in Sources */,
+				EDC90751F648F38E91448E3C51F1025A /* URLRequest+Alamofire.swift in Sources */,
+				31BE8CEA7A5AC3856B7F11ED4AEA6B9E /* URLSessionConfiguration+Alamofire.swift in Sources */,
+				7727CF14950FF3C560BEFDEEA79FEA71 /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C4EAE3C264477BF7D7DADC22F86866C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F7B7036784497537BF56B3608136CE2 /* Pods-mercadopagoApiUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DB95D40AD328DFBF8C57F67968FE0F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A7D037EC14605BC76296A4E3C5CCDFF /* Pods-mercadopagoApiTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4012742A64CF852DECBC56FB1E1D1149 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A72FBFA6880118C3FF429A6F10ADB69A /* Pods-mercadopagoApi-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		396ED92CDA2FBFE420DA0241D4111795 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 5B3A7BCCABAE83232F14C87C5CE350FC /* Alamofire */;
+			targetProxy = 6608D6DB5293AA36F95D5093C4672BE6 /* PBXContainerItemProxy */;
+		};
+		A61F3FCAEC7B6AE602E7F9773FDBF03F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-mercadopagoApi";
+			target = 23241DE78D9B885662D9C0B4E4416306 /* Pods-mercadopagoApi */;
+			targetProxy = 3A3C9CD86E5985034141B24397810F20 /* PBXContainerItemProxy */;
+		};
+		C2156EF5A672C34244E6CA91F5AA1DBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-mercadopagoApi";
+			target = 23241DE78D9B885662D9C0B4E4416306 /* Pods-mercadopagoApi */;
+			targetProxy = 407CCC74712864F9A75FD03C9F4B522C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		329EBF2E8BB20C78B86E09266B863F17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCCB4E50CFDCA1CAB9854F660FD7F555 /* Alamofire.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		55BFE6088A4897EB0E0F77A8302B4719 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCCB4E50CFDCA1CAB9854F660FD7F555 /* Alamofire.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8322AE3FB6DF16A80BCBA121575DBB8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		892C97D57114B410E4EDCBDC2A61407C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 289352C11B71EF8FFC08C10C0E4102A3 /* Pods-mercadopagoApiUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-mercadopagoApiUITests/Pods-mercadopagoApiUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-mercadopagoApiUITests/Pods-mercadopagoApiUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8DA25C94A978799B16BD2A14E74BF493 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8717AF92470CE64D1E7111B292CEAACC /* Pods-mercadopagoApi.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-mercadopagoApi/Pods-mercadopagoApi-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-mercadopagoApi/Pods-mercadopagoApi.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8DC861F53B471F106BC8ACC4475EFA12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		AFC174E8CF6653545EE9579FD1E230A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68C42A1E4D6D12DBFDDBDF306564BD9F /* Pods-mercadopagoApiTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-mercadopagoApiTests/Pods-mercadopagoApiTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-mercadopagoApiTests/Pods-mercadopagoApiTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CC61ED202DE5B4572FB93ACED4CDBD17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A955B029027AE8C86609BC9C53195CA /* Pods-mercadopagoApi.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-mercadopagoApi/Pods-mercadopagoApi-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-mercadopagoApi/Pods-mercadopagoApi.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CF48204235BCF1D3BEBC2C6722F50420 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFA10840CCE18CF5AF71EE1E16171DAE /* Pods-mercadopagoApiTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-mercadopagoApiTests/Pods-mercadopagoApiTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-mercadopagoApiTests/Pods-mercadopagoApiTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F959DA07B09198ED33E06668E3C7F36C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E408B137770ADE13A9A5100D7586D973 /* Pods-mercadopagoApiUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-mercadopagoApiUITests/Pods-mercadopagoApiUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-mercadopagoApiUITests/Pods-mercadopagoApiUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8322AE3FB6DF16A80BCBA121575DBB8A /* Debug */,
+				8DC861F53B471F106BC8ACC4475EFA12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B9F94E9E5D489B946D59A52937661A2 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55BFE6088A4897EB0E0F77A8302B4719 /* Debug */,
+				329EBF2E8BB20C78B86E09266B863F17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CB3AD1A0037A8BCBB854BCDF10FBCAF /* Build configuration list for PBXNativeTarget "Pods-mercadopagoApiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFC174E8CF6653545EE9579FD1E230A2 /* Debug */,
+				CF48204235BCF1D3BEBC2C6722F50420 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD91F23D065B45BFC2C5E0C8B0945C4F /* Build configuration list for PBXNativeTarget "Pods-mercadopagoApi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC61ED202DE5B4572FB93ACED4CDBD17 /* Debug */,
+				8DA25C94A978799B16BD2A14E74BF493 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E05E45FA36DC1780911E8F2BA5E612C8 /* Build configuration list for PBXNativeTarget "Pods-mercadopagoApiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				892C97D57114B410E4EDCBDC2A61407C /* Debug */,
+				F959DA07B09198ED33E06668E3C7F36C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
