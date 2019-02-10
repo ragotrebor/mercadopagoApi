@@ -10,9 +10,24 @@ import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
 
+//MARK: - Parameters
 struct PaymentsParamaters: Parameterizable {
     var asParameters: Parameters {
         return [
+            "public_key": API.publicKey
+        ]
+    }
+}
+
+struct CardIssuerParamaters: Parameterizable {
+    var paymentId: String?
+    
+    var asParameters: Parameters {
+        guard let paymentId = paymentId else {
+            return [:]
+        }
+        return [
+            "payment_method_id": paymentId,
             "public_key": API.publicKey
         ]
     }
@@ -54,11 +69,29 @@ extension API {
         }
     }
     
-    static func getCardIssuers(paymentId: String) {
-        Alamofire.request("https://eee.com/geo?lat=10.2&lng=10.2").responseObject { (response: DataResponse<CardIssuer>) in
+    static func getCardIssuers(paymentId: String, onResponse: CompletionHandler = nil, onSuccess: SuccessHandler<[CardIssuer]> = nil, onFailure: CompletionHandler = nil) {
+        let parameters = CardIssuerParamaters(paymentId: paymentId).asParameters
+        Alamofire.request(baseUrl, method: .get, parameters: parameters ).responseArray  { (response: DataResponse<[CardIssuer]>) in
 
-            let cardIssuers = response.result.value
-            print(cardIssuers)
+            if let onResponse = onResponse {
+                onResponse()
+            }
+            
+            switch response.result {
+            case .success(let value):
+                guard let onSuccess = onSuccess else {
+                    return
+                }
+                
+                onSuccess(value)
+            case .failure:
+                guard let onFailure = onFailure else {
+                    return
+                }
+                
+                onFailure()
+                
+            }
         }
     }
     

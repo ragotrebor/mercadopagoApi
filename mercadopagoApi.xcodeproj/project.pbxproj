@@ -37,6 +37,7 @@
 		62A86FFC220FE63900CA6E68 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A86FFB220FE63900CA6E68 /* PaymentViewController.swift */; };
 		62A86FFE220FE64E00CA6E68 /* PaymentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A86FFD220FE64E00CA6E68 /* PaymentPresenter.swift */; };
 		62A87000220FE84800CA6E68 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A86FFF220FE84800CA6E68 /* Payment.storyboard */; };
+		62A8700222109AE000CA6E68 /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A8700122109AE000CA6E68 /* PaymentTableViewCell.swift */; };
 		62E0E084220F8C2200B6AC59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E0E083220F8C2200B6AC59 /* AppDelegate.swift */; };
 		62E0E08B220F8C2500B6AC59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62E0E08A220F8C2500B6AC59 /* Assets.xcassets */; };
 		62E0E08E220F8C2500B6AC59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62E0E08C220F8C2500B6AC59 /* LaunchScreen.storyboard */; };
@@ -98,6 +99,7 @@
 		62A86FFB220FE63900CA6E68 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		62A86FFD220FE64E00CA6E68 /* PaymentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPresenter.swift; sourceTree = "<group>"; };
 		62A86FFF220FE84800CA6E68 /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
+		62A8700122109AE000CA6E68 /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
 		62E0E080220F8C2200B6AC59 /* mercadopagoApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mercadopagoApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62E0E083220F8C2200B6AC59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62E0E08A220F8C2500B6AC59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				62A86FFB220FE63900CA6E68 /* PaymentViewController.swift */,
 				62A86FFD220FE64E00CA6E68 /* PaymentPresenter.swift */,
 				62A86FFF220FE84800CA6E68 /* Payment.storyboard */,
+				62A8700122109AE000CA6E68 /* PaymentTableViewCell.swift */,
 			);
 			path = Payment;
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62A86FF8220FCCA500CA6E68 /* AmountPresenter.swift in Sources */,
+				62A8700222109AE000CA6E68 /* PaymentTableViewCell.swift in Sources */,
 				62A86FFE220FE64E00CA6E68 /* PaymentPresenter.swift in Sources */,
 				62A86FED220FBE1E00CA6E68 /* CardIssuer.swift in Sources */,
 				62E0E084220F8C2200B6AC59 /* AppDelegate.swift in Sources */,

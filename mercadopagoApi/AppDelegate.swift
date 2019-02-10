@@ -24,10 +24,12 @@ extension AppDelegate {
     }
     
     func setInitialVc() {
-        let splashVc = AmountPresenter.createModule()
+        //let initialVc = AmountPresenter.createModule()
         
+        let initialVc = PaymentPresenter.createModule()
+    
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = splashVc
+        window?.rootViewController = initialVc
         window?.makeKeyAndVisible()
     }
 }

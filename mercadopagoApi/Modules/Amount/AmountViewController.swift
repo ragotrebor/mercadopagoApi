@@ -42,8 +42,7 @@ class AmountViewController: HideableKeyboardUIViewController {
         didSet {
             amountInputErrorLabel.font = .caption
             amountInputErrorLabel.textColor = .errorSalmon
-            amountInputErrorLabel.text = ""
-            amountInputErrorLabel.isHidden = true
+            amountInputErrorLabel.displayText("")
         }
     }
     
@@ -94,7 +93,7 @@ extension AmountViewController {
     @objc func onEditingChanged(sender: UITextField) {
         switch sender {
         case amountInputTextField:
-            amountInputErrorLabel.isHidden = true
+            amountInputErrorLabel.displayText("")
         default: break
         }
     }

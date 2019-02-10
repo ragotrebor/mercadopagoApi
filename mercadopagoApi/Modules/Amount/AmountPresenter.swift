@@ -43,7 +43,7 @@ class AmountPresenter: AmountPresenterProcotol {
     var paymentData: PaymentData?
     
     static func createModule() -> AmountViewController {
-        let viewController = AmountViewController.storyboardNavigationController().topViewController as! AmountViewController
+        let viewController = AmountViewController.storyboardViewController()
         let presenter: AmountPresenterProcotol = AmountPresenter()
         
         presenter.view = viewController
@@ -55,10 +55,8 @@ class AmountPresenter: AmountPresenterProcotol {
     
     func goToPayment() {
         let paymentVc = PaymentPresenter.createModule()
-        guard let nav = paymentVc.navigationController else {
-            return
-        }
-        view?.present(nav, animated: true, completion: nil)
+        paymentVc.presenter?.paymentData = paymentData
+        view?.present(paymentVc, animated: true, completion: nil)
         
     }
     
@@ -74,11 +72,6 @@ class AmountPresenter: AmountPresenterProcotol {
         }
         paymentData?.amount = amount
         goToPayment()
-//        API.getPayments(onSuccess: { (payments) in
-//
-//        }, onFailure: {
-//            self.view?.presentAlertView(type: .genericError)
-//        })
     }
     
     

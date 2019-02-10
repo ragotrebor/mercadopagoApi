@@ -50,6 +50,7 @@ extension UIColor {
     static let secondaryFontColor = UIColor(red:0.60, green:0.60, blue:0.60, alpha:1.0)
     static let sucessGreen = UIColor(red:0.22, green:0.71, blue:0.29, alpha:1.0)
     static let errorSalmon = UIColor(red: 1.0, green: 107.0 / 255.0, blue: 107.0 / 255.0, alpha: 1.0)
+    static let borderColor = UIColor(white: 0.0, alpha: 0.12)
 }
 
 // MARK: - Typealias
@@ -212,11 +213,59 @@ class HideableKeyboardUIViewController: UIViewController {
     }
 }
 
-// MARK: UILabel
+// MARK: - UILabel
 
 extension UILabel {
     func displayText(_ text: String) {
-        self.text = text
-        self.isHidden = false
+        if text.isEmpty {
+            self.text = text
+            self.isHidden = true
+        } else {
+            self.text = text
+            self.isHidden = false
+        }
+        
     }
 }
+
+// MARK: - UIView
+
+extension UIView {
+    @IBInspectable
+    var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+        }
+    }
+    
+    @IBInspectable
+    var borderWidth: CGFloat {
+        get {
+            return layer.borderWidth
+        }
+        set {
+            layer.borderWidth = newValue
+        }
+    }
+    
+    @IBInspectable
+    var borderColor: UIColor? {
+        get {
+            if let color = layer.borderColor {
+                return UIColor(cgColor: color)
+            }
+            return nil
+        }
+        set {
+            if let color = newValue {
+                layer.borderColor = color.cgColor
+            } else {
+                layer.borderColor = nil
+            }
+        }
+    }
+}
+

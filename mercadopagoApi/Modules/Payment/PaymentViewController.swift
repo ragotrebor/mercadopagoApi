@@ -15,6 +15,7 @@ class PaymentViewController: UIViewController {
         didSet {
             paymentTableView.dataSource = self
             paymentTableView.delegate = self
+            paymentTableView.separatorStyle = .none
         }
     }
     
@@ -31,28 +32,51 @@ class PaymentViewController: UIViewController {
             paymentTableView.reloadData()
         }
     }
+    
 }
 
+// MARK: - View
+extension PaymentViewController: PaymentViewProtocol {
+    func set(dataSource: [Payment]) {
+        self.dataSource = dataSource
+    }
+    
+    func startActivityIndicator() {
+        activityIndicator.startAnimating()
+    }
+    
+    func stopActivityIndicator() {
+        activityIndicator.stopAnimating()
+    }
+    
+}
 
 // MARK: - Lifecycle
 extension PaymentViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let navigationcController = navigationController {
-            navigationController?.title = "Metodo de pago"
-        }
+        presenter?.onViewDidLoad()
     }
 }
 
+// MARK: - Tableview methods
 extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "paymentCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "paymentCell", for: indexPath) as! PaymentTableViewCell
+        
+        if let payment = dataSource?[indexPath.row] {
+            cell.paymentData = payment
+        }
+
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.onPaymentMethodSelected(index: indexPath.row)
+    }
     
 }
