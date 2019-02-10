@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Vz-ok-cQi">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash Screen View Controller-->
+        <scene sceneID="fSl-4G-D4K">
+            <objects>
+                <viewController id="3Vz-ok-cQi" customClass="SplashScreenViewController" customModule="mercadopagoApi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wuy-dz-zee">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mercadolibreLogo" translatesAutoresizingMaskIntoConstraints="NO" id="4vT-6H-8TN">
+                                <rect key="frame" x="94" y="296" width="187.5" height="75"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99903792140000003" green="0.94339960810000001" blue="0.34880590439999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4vT-6H-8TN" firstAttribute="centerX" secondItem="Wuy-dz-zee" secondAttribute="centerX" id="FiU-2n-zLf"/>
+                            <constraint firstItem="4vT-6H-8TN" firstAttribute="width" secondItem="4vT-6H-8TN" secondAttribute="height" multiplier="500:200" id="T9R-ii-mGv"/>
+                            <constraint firstItem="4vT-6H-8TN" firstAttribute="centerY" secondItem="Wuy-dz-zee" secondAttribute="centerY" id="esF-Cm-O4B"/>
+                            <constraint firstItem="4vT-6H-8TN" firstAttribute="width" secondItem="Wuy-dz-zee" secondAttribute="width" multiplier="0.5" id="jtV-nn-Dbb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Cv-Ez-WOZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RFh-zJ-gYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215" y="168"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mercadolibreLogo" width="151" height="60.5"/>
+    </resources>
+</document>

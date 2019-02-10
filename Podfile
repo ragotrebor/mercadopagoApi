@@ -6,7 +6,10 @@ target 'mercadopagoApi' do
   use_frameworks!
 
   # Pods for mercadopagoApi
-  pod 'Alamofire', '~> 5.0.0-beta.2'
+  pod 'Alamofire', '~> 4.7'
+  pod 'ObjectMapper', '~> 3.4'
+  pod 'AlamofireObjectMapper', '~> 5.2'
+  pod 'Kingfisher', '~> 5.0'
 
   target 'mercadopagoApiTests' do
     inherit! :search_paths
