@@ -9,13 +9,45 @@
 import UIKit
 import Alamofire
 
+// MARK: - UIFont
+
+enum AppFontSizes: CGFloat {
+    case h1Size = 92.38
+    case h2Size = 57.74
+    case h3Size = 46.19
+    case h4Size = 32.72
+    case h5Size = 23.1
+    case h6Size = 19.25
+    case body1 = 15.4
+    case body2 = 13.47
+    case caption = 11.55
+    case tabItem = 10
+}
+
+enum AppFontTypes: String {
+    case medium = "Montserrat-Medium"
+    case regular = "Montserrat-Regular"
+}
+
+extension UIFont {
+    static let h4Font = UIFont(name: AppFontTypes.regular.rawValue, size: AppFontSizes.h4Size.rawValue)!
+    static let h5Font = UIFont(name: AppFontTypes.regular.rawValue, size: AppFontSizes.h5Size.rawValue)!
+    static let h6Font = UIFont(name: AppFontTypes.regular.rawValue, size: AppFontSizes.h6Size.rawValue)!
+    static let body1 = UIFont(name: AppFontTypes.regular.rawValue, size: AppFontSizes.body1.rawValue)!
+    static let body2 = UIFont(name: AppFontTypes.regular.rawValue, size: AppFontSizes.body2.rawValue)!
+    static let subtitle1 = UIFont(name: AppFontTypes.regular.rawValue, size: AppFontSizes.body1.rawValue)!
+    static let subtitle2 = UIFont(name: AppFontTypes.regular.rawValue, size: AppFontSizes.body2.rawValue)!
+    static let button = UIFont(name: AppFontTypes.medium.rawValue, size: AppFontSizes.body2.rawValue)!
+    static let caption = UIFont(name: AppFontTypes.regular.rawValue, size: AppFontSizes.caption.rawValue)!
+}
+
 // MARK: - UIColor
 
 extension UIColor {
     static let primaryColor = UIColor(red:1.00, green:0.95, blue:0.35, alpha:1.0)
     static let secondaryColor = UIColor(red:0.20, green:0.51, blue:0.98, alpha:1.0)
     static let primaryFontColor = UIColor(red:0.20, green:0.20, blue:0.20, alpha:1.0)
-    static let secondadyFontColor = UIColor(red:0.60, green:0.60, blue:0.60, alpha:1.0)
+    static let secondaryFontColor = UIColor(red:0.60, green:0.60, blue:0.60, alpha:1.0)
     static let sucessGreen = UIColor(red:0.22, green:0.71, blue:0.29, alpha:1.0)
     static let errorSalmon = UIColor(red: 1.0, green: 107.0 / 255.0, blue: 107.0 / 255.0, alpha: 1.0)
 }
@@ -23,6 +55,9 @@ extension UIColor {
 // MARK: - Typealias
 
 typealias CompletionHandler = (()->Void)?
+typealias SuccessHandler<T> = ((T)-> Void)?
+
+// MARK: - String
 
 extension String {
     static let empty = ""
@@ -105,7 +140,7 @@ extension UIViewController {
         let attributedTitle = NSMutableAttributedString(
             string: alertTitle,
             attributes: [
-                .font: UIFont(name: "Montserrat-Bold", size: 17.0)!,
+                .font: UIFont.body1,
                 .foregroundColor: UIColor(white: 33.0 / 255.0, alpha: 1.0)
             ]
         )
@@ -113,7 +148,7 @@ extension UIViewController {
         let attributedMessage = NSMutableAttributedString(
             string: alertMessage,
             attributes: [
-                .font: UIFont(name: "Montserrat-Regular", size: 13.0)!,
+                .font: UIFont.body2,
                 .foregroundColor: UIColor(white: 33.0 / 255.0, alpha: 1.0)
             ]
         )
@@ -127,6 +162,10 @@ extension UIViewController {
             attributedMessage,
             forKey: "attributedMessage"
         )
+    }
+    
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
     }
 }
 
@@ -150,6 +189,10 @@ extension Storyboardable where Self: UIViewController {
         
         return vc
     }
+    
+    static func storyboardNavigationController() -> UINavigationController {
+        return UINavigationController(rootViewController: storyboardViewController())
+    }
 }
 
 extension UIViewController: Storyboardable { }
@@ -157,4 +200,23 @@ extension UIViewController: Storyboardable { }
 // MARK: - Parameterizable
 protocol Parameterizable {
     var asParameters: Parameters {get}
+}
+
+
+// MARK: - Class HideableKeyboardUIViewController
+class HideableKeyboardUIViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+}
+
+// MARK: UILabel
+
+extension UILabel {
+    func displayText(_ text: String) {
+        self.text = text
+        self.isHidden = false
+    }
 }

@@ -24,7 +24,7 @@ extension AppDelegate {
     }
     
     func setInitialVc() {
-        let splashVc = SplashScreenPresenter.createModule()
+        let splashVc = AmountPresenter.createModule()
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = splashVc

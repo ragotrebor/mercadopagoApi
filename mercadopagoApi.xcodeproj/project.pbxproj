@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		62A86FB5220F914400CA6E68 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A86FB4220F914400CA6E68 /* Extensions.swift */; };
-		62A86FB8220F99EE00CA6E68 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A86FB7220F99EE00CA6E68 /* SplashScreen.storyboard */; };
-		62A86FBA220F9A0400CA6E68 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A86FB9220F9A0400CA6E68 /* SplashScreenViewController.swift */; };
-		62A86FBC220F9A2700CA6E68 /* SplashScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A86FBB220F9A2700CA6E68 /* SplashScreenPresenter.swift */; };
 		62A86FD1220FA23700CA6E68 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62A86FBE220FA23500CA6E68 /* Montserrat-Italic.ttf */; };
 		62A86FD2220FA23700CA6E68 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62A86FBF220FA23500CA6E68 /* Montserrat-Bold.ttf */; };
 		62A86FD3220FA23700CA6E68 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62A86FC0220FA23600CA6E68 /* Montserrat-ExtraBoldItalic.ttf */; };
@@ -34,6 +31,12 @@
 		62A86FE7220FA94100CA6E68 /* Installment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A86FE6220FA94100CA6E68 /* Installment.swift */; };
 		62A86FE9220FA94B00CA6E68 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A86FE8220FA94B00CA6E68 /* Payment.swift */; };
 		62A86FED220FBE1E00CA6E68 /* CardIssuer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A86FEC220FBE1E00CA6E68 /* CardIssuer.swift */; };
+		62A86FF4220FCC8400CA6E68 /* Amount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A86FF3220FCC8400CA6E68 /* Amount.storyboard */; };
+		62A86FF6220FCC9200CA6E68 /* AmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A86FF5220FCC9200CA6E68 /* AmountViewController.swift */; };
+		62A86FF8220FCCA500CA6E68 /* AmountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A86FF7220FCCA500CA6E68 /* AmountPresenter.swift */; };
+		62A86FFC220FE63900CA6E68 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A86FFB220FE63900CA6E68 /* PaymentViewController.swift */; };
+		62A86FFE220FE64E00CA6E68 /* PaymentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A86FFD220FE64E00CA6E68 /* PaymentPresenter.swift */; };
+		62A87000220FE84800CA6E68 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A86FFF220FE84800CA6E68 /* Payment.storyboard */; };
 		62E0E084220F8C2200B6AC59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E0E083220F8C2200B6AC59 /* AppDelegate.swift */; };
 		62E0E08B220F8C2500B6AC59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62E0E08A220F8C2500B6AC59 /* Assets.xcassets */; };
 		62E0E08E220F8C2500B6AC59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62E0E08C220F8C2500B6AC59 /* LaunchScreen.storyboard */; };
@@ -66,9 +69,6 @@
 		542EC5701EF93A4921D7E2A6 /* Pods_mercadopagoApiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mercadopagoApiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF5AC80B687565A0C2D768A /* Pods-mercadopagoApiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mercadopagoApiTests.release.xcconfig"; path = "Target Support Files/Pods-mercadopagoApiTests/Pods-mercadopagoApiTests.release.xcconfig"; sourceTree = "<group>"; };
 		62A86FB4220F914400CA6E68 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		62A86FB7220F99EE00CA6E68 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
-		62A86FB9220F9A0400CA6E68 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
-		62A86FBB220F9A2700CA6E68 /* SplashScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenPresenter.swift; sourceTree = "<group>"; };
 		62A86FBE220FA23500CA6E68 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		62A86FBF220FA23500CA6E68 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		62A86FC0220FA23600CA6E68 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -92,6 +92,12 @@
 		62A86FE6220FA94100CA6E68 /* Installment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installment.swift; sourceTree = "<group>"; };
 		62A86FE8220FA94B00CA6E68 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		62A86FEC220FBE1E00CA6E68 /* CardIssuer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardIssuer.swift; sourceTree = "<group>"; };
+		62A86FF3220FCC8400CA6E68 /* Amount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Amount.storyboard; sourceTree = "<group>"; };
+		62A86FF5220FCC9200CA6E68 /* AmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewController.swift; sourceTree = "<group>"; };
+		62A86FF7220FCCA500CA6E68 /* AmountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountPresenter.swift; sourceTree = "<group>"; };
+		62A86FFB220FE63900CA6E68 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		62A86FFD220FE64E00CA6E68 /* PaymentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPresenter.swift; sourceTree = "<group>"; };
+		62A86FFF220FE84800CA6E68 /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
 		62E0E080220F8C2200B6AC59 /* mercadopagoApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mercadopagoApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62E0E083220F8C2200B6AC59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62E0E08A220F8C2500B6AC59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -152,7 +158,10 @@
 		62A86FB0220F907500CA6E68 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				62A86FB6220F99CD00CA6E68 /* SplashScreen */,
+				62A86FF2220FCBDF00CA6E68 /* Installment */,
+				62A86FF0220FCBD100CA6E68 /* CardIssuer */,
+				62A86FEF220FCBC700CA6E68 /* Amount */,
+				62A86FEE220FCB6100CA6E68 /* Payment */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -183,16 +192,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		62A86FB6220F99CD00CA6E68 /* SplashScreen */ = {
-			isa = PBXGroup;
-			children = (
-				62A86FB7220F99EE00CA6E68 /* SplashScreen.storyboard */,
-				62A86FB9220F9A0400CA6E68 /* SplashScreenViewController.swift */,
-				62A86FBB220F9A2700CA6E68 /* SplashScreenPresenter.swift */,
-			);
-			path = SplashScreen;
-			sourceTree = "<group>";
-		};
 		62A86FBD220FA22500CA6E68 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +216,40 @@
 				62A86FC5220FA23600CA6E68 /* OFL.txt */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		62A86FEE220FCB6100CA6E68 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				62A86FFB220FE63900CA6E68 /* PaymentViewController.swift */,
+				62A86FFD220FE64E00CA6E68 /* PaymentPresenter.swift */,
+				62A86FFF220FE84800CA6E68 /* Payment.storyboard */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		62A86FEF220FCBC700CA6E68 /* Amount */ = {
+			isa = PBXGroup;
+			children = (
+				62A86FF3220FCC8400CA6E68 /* Amount.storyboard */,
+				62A86FF5220FCC9200CA6E68 /* AmountViewController.swift */,
+				62A86FF7220FCCA500CA6E68 /* AmountPresenter.swift */,
+			);
+			path = Amount;
+			sourceTree = "<group>";
+		};
+		62A86FF0220FCBD100CA6E68 /* CardIssuer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CardIssuer;
+			sourceTree = "<group>";
+		};
+		62A86FF2220FCBDF00CA6E68 /* Installment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Installment;
 			sourceTree = "<group>";
 		};
 		62E0E077220F8C2200B6AC59 = {
@@ -403,14 +436,15 @@
 				62A86FDE220FA23700CA6E68 /* Montserrat-BlackItalic.ttf in Resources */,
 				62A86FDA220FA23700CA6E68 /* Montserrat-LightItalic.ttf in Resources */,
 				62A86FD5220FA23700CA6E68 /* Montserrat-BoldItalic.ttf in Resources */,
+				62A87000220FE84800CA6E68 /* Payment.storyboard in Resources */,
 				62A86FD2220FA23700CA6E68 /* Montserrat-Bold.ttf in Resources */,
+				62A86FF4220FCC8400CA6E68 /* Amount.storyboard in Resources */,
 				62A86FDB220FA23700CA6E68 /* Montserrat-ExtraBold.ttf in Resources */,
 				62E0E08E220F8C2500B6AC59 /* LaunchScreen.storyboard in Resources */,
 				62A86FD9220FA23700CA6E68 /* Montserrat-Black.ttf in Resources */,
 				62A86FDD220FA23700CA6E68 /* Montserrat-ExtraLightItalic.ttf in Resources */,
 				62A86FD4220FA23700CA6E68 /* Montserrat-Regular.ttf in Resources */,
 				62A86FE2220FA23700CA6E68 /* Montserrat-Thin.ttf in Resources */,
-				62A86FB8220F99EE00CA6E68 /* SplashScreen.storyboard in Resources */,
 				62A86FE1220FA23700CA6E68 /* Montserrat-SemiBold.ttf in Resources */,
 				62A86FE3220FA23700CA6E68 /* Montserrat-ThinItalic.ttf in Resources */,
 				62A86FD3220FA23700CA6E68 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
@@ -539,13 +573,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62A86FF8220FCCA500CA6E68 /* AmountPresenter.swift in Sources */,
+				62A86FFE220FE64E00CA6E68 /* PaymentPresenter.swift in Sources */,
 				62A86FED220FBE1E00CA6E68 /* CardIssuer.swift in Sources */,
 				62E0E084220F8C2200B6AC59 /* AppDelegate.swift in Sources */,
-				62A86FBC220F9A2700CA6E68 /* SplashScreenPresenter.swift in Sources */,
+				62A86FF6220FCC9200CA6E68 /* AmountViewController.swift in Sources */,
 				62A86FE7220FA94100CA6E68 /* Installment.swift in Sources */,
 				62A86FB5220F914400CA6E68 /* Extensions.swift in Sources */,
 				62A86FE9220FA94B00CA6E68 /* Payment.swift in Sources */,
-				62A86FBA220F9A0400CA6E68 /* SplashScreenViewController.swift in Sources */,
+				62A86FFC220FE63900CA6E68 /* PaymentViewController.swift in Sources */,
 				62A86FE5220FA70800CA6E68 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

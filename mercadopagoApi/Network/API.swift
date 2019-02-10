@@ -28,12 +28,29 @@ enum API {
 // MARK: - API Methods
 
 extension API {
-    static func getPayments() {
+    static func getPayments(onResponse: CompletionHandler = nil, onSuccess: SuccessHandler<[Payment]> = nil, onFailure: CompletionHandler = nil) {
         let parameters = PaymentsParamaters().asParameters
         Alamofire.request(baseUrl, method: .get, parameters: parameters ).responseArray { (response: DataResponse<[Payment]>) in
             
-            let payments = response.result.value
-            print(payments.debugDescription)
+            if let onResponse = onResponse {
+                onResponse()
+            }
+            
+            switch response.result {
+            case .success(let value):
+                guard let onSuccess = onSuccess else {
+                    return
+                }
+                
+                onSuccess(value)
+            case .failure:
+                guard let onFailure = onFailure else {
+                    return
+                }
+                
+                onFailure()
+                
+            }
         }
     }
     
