@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0X4-sH-CXL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card Issuer View Controller-->
+        <scene sceneID="FQq-gF-vrP">
+            <objects>
+                <viewController id="0X4-sH-CXL" customClass="CardIssuerViewController" customModule="mercadopagoApi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z9R-Qd-cib">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lft-6b-iri">
+                                <rect key="frame" x="0.0" y="52" width="375" height="615"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardIssuerCell" rowHeight="80" id="fVi-8Y-Tu6" customClass="CardIssuerTableViewCell" customModule="mercadopagoApi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fVi-8Y-Tu6" id="zaO-cV-o7n">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z2I-WJ-1v7">
+                                                    <rect key="frame" x="16" y="4" width="343" height="71.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Pmd-dN-Hj0">
+                                                            <rect key="frame" x="16" y="8" width="311" height="55.5"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1wE-rx-l0r">
+                                                                    <rect key="frame" x="0.0" y="17" width="32" height="21.5"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="1wE-rx-l0r" secondAttribute="height" multiplier="3:2" id="fbJ-kU-8Sd"/>
+                                                                        <constraint firstAttribute="width" constant="32" id="i8V-0S-dfA"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ks-CH-FjP">
+                                                                    <rect key="frame" x="48" y="17.5" width="263" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="Pmd-dN-Hj0" secondAttribute="bottom" constant="8" id="HbS-6j-Vra"/>
+                                                        <constraint firstItem="Pmd-dN-Hj0" firstAttribute="top" secondItem="Z2I-WJ-1v7" secondAttribute="top" constant="8" id="IeM-MV-dl5"/>
+                                                        <constraint firstItem="Pmd-dN-Hj0" firstAttribute="leading" secondItem="Z2I-WJ-1v7" secondAttribute="leading" constant="16" id="nGV-qR-9Qc"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Pmd-dN-Hj0" secondAttribute="trailing" constant="16" id="swc-wu-DgV"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Z2I-WJ-1v7" firstAttribute="leading" secondItem="zaO-cV-o7n" secondAttribute="leading" constant="16" id="CAX-uL-TkH"/>
+                                                <constraint firstItem="Z2I-WJ-1v7" firstAttribute="top" secondItem="zaO-cV-o7n" secondAttribute="top" constant="4" id="LKX-vc-Ptc"/>
+                                                <constraint firstAttribute="trailing" secondItem="Z2I-WJ-1v7" secondAttribute="trailing" constant="16" id="QUc-sU-cvy"/>
+                                                <constraint firstAttribute="bottom" secondItem="Z2I-WJ-1v7" secondAttribute="bottom" constant="4" id="bFO-F8-XMp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="borderView" destination="Z2I-WJ-1v7" id="g6X-r1-m5b"/>
+                                            <outlet property="cardIssuerImageView" destination="1wE-rx-l0r" id="RY6-CF-OLv"/>
+                                            <outlet property="cardIssuerNameLabel" destination="2Ks-CH-FjP" id="5rx-nh-e4g"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="4m8-yZ-CIQ">
+                                <rect key="frame" x="177.5" y="349.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4m8-yZ-CIQ" firstAttribute="centerX" secondItem="Lft-6b-iri" secondAttribute="centerX" id="0UB-v7-7Yy"/>
+                            <constraint firstItem="ZdQ-HS-eIw" firstAttribute="bottom" secondItem="Lft-6b-iri" secondAttribute="bottom" id="2yl-4c-Lta"/>
+                            <constraint firstItem="Lft-6b-iri" firstAttribute="top" secondItem="ZdQ-HS-eIw" secondAttribute="top" constant="32" id="5Y4-kb-miH"/>
+                            <constraint firstItem="Lft-6b-iri" firstAttribute="leading" secondItem="ZdQ-HS-eIw" secondAttribute="leading" id="nI0-gf-Vuo"/>
+                            <constraint firstItem="4m8-yZ-CIQ" firstAttribute="centerY" secondItem="Lft-6b-iri" secondAttribute="centerY" id="pjX-0i-gdI"/>
+                            <constraint firstItem="ZdQ-HS-eIw" firstAttribute="trailing" secondItem="Lft-6b-iri" secondAttribute="trailing" id="tav-Vl-xXW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZdQ-HS-eIw"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="4m8-yZ-CIQ" id="kYx-BQ-41O"/>
+                        <outlet property="cardIssuerTableView" destination="Lft-6b-iri" id="9Q0-h6-RgH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BZ3-A4-DBu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59" y="74"/>
+        </scene>
+    </scenes>
+</document>

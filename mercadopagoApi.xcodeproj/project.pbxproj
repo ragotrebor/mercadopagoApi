@@ -38,6 +38,14 @@
 		62A86FFE220FE64E00CA6E68 /* PaymentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A86FFD220FE64E00CA6E68 /* PaymentPresenter.swift */; };
 		62A87000220FE84800CA6E68 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A86FFF220FE84800CA6E68 /* Payment.storyboard */; };
 		62A8700222109AE000CA6E68 /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A8700122109AE000CA6E68 /* PaymentTableViewCell.swift */; };
+		62B6E39A2210B104009BED87 /* CardIssuer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62B6E3992210B104009BED87 /* CardIssuer.storyboard */; };
+		62B6E39C2210B117009BED87 /* CardIssuerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B6E39B2210B117009BED87 /* CardIssuerViewController.swift */; };
+		62B6E39E2210B129009BED87 /* CardIssuerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B6E39D2210B129009BED87 /* CardIssuerPresenter.swift */; };
+		62B6E3A02210B13C009BED87 /* CardIssuerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B6E39F2210B13C009BED87 /* CardIssuerTableViewCell.swift */; };
+		62B6E3A22210C0DA009BED87 /* Installment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62B6E3A12210C0DA009BED87 /* Installment.storyboard */; };
+		62B6E3A42210C0F2009BED87 /* InstallmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B6E3A32210C0F2009BED87 /* InstallmentTableViewCell.swift */; };
+		62B6E3A62210C113009BED87 /* InstallmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B6E3A52210C113009BED87 /* InstallmentViewController.swift */; };
+		62B6E3A82210C127009BED87 /* InstallmentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B6E3A72210C127009BED87 /* InstallmentPresenter.swift */; };
 		62E0E084220F8C2200B6AC59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E0E083220F8C2200B6AC59 /* AppDelegate.swift */; };
 		62E0E08B220F8C2500B6AC59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62E0E08A220F8C2500B6AC59 /* Assets.xcassets */; };
 		62E0E08E220F8C2500B6AC59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62E0E08C220F8C2500B6AC59 /* LaunchScreen.storyboard */; };
@@ -100,6 +108,14 @@
 		62A86FFD220FE64E00CA6E68 /* PaymentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPresenter.swift; sourceTree = "<group>"; };
 		62A86FFF220FE84800CA6E68 /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
 		62A8700122109AE000CA6E68 /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
+		62B6E3992210B104009BED87 /* CardIssuer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardIssuer.storyboard; sourceTree = "<group>"; };
+		62B6E39B2210B117009BED87 /* CardIssuerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardIssuerViewController.swift; sourceTree = "<group>"; };
+		62B6E39D2210B129009BED87 /* CardIssuerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardIssuerPresenter.swift; sourceTree = "<group>"; };
+		62B6E39F2210B13C009BED87 /* CardIssuerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardIssuerTableViewCell.swift; sourceTree = "<group>"; };
+		62B6E3A12210C0DA009BED87 /* Installment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Installment.storyboard; sourceTree = "<group>"; };
+		62B6E3A32210C0F2009BED87 /* InstallmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentTableViewCell.swift; sourceTree = "<group>"; };
+		62B6E3A52210C113009BED87 /* InstallmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentViewController.swift; sourceTree = "<group>"; };
+		62B6E3A72210C127009BED87 /* InstallmentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentPresenter.swift; sourceTree = "<group>"; };
 		62E0E080220F8C2200B6AC59 /* mercadopagoApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mercadopagoApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62E0E083220F8C2200B6AC59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62E0E08A220F8C2500B6AC59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -244,6 +260,10 @@
 		62A86FF0220FCBD100CA6E68 /* CardIssuer */ = {
 			isa = PBXGroup;
 			children = (
+				62B6E3992210B104009BED87 /* CardIssuer.storyboard */,
+				62B6E39B2210B117009BED87 /* CardIssuerViewController.swift */,
+				62B6E39D2210B129009BED87 /* CardIssuerPresenter.swift */,
+				62B6E39F2210B13C009BED87 /* CardIssuerTableViewCell.swift */,
 			);
 			path = CardIssuer;
 			sourceTree = "<group>";
@@ -251,6 +271,10 @@
 		62A86FF2220FCBDF00CA6E68 /* Installment */ = {
 			isa = PBXGroup;
 			children = (
+				62B6E3A12210C0DA009BED87 /* Installment.storyboard */,
+				62B6E3A32210C0F2009BED87 /* InstallmentTableViewCell.swift */,
+				62B6E3A52210C113009BED87 /* InstallmentViewController.swift */,
+				62B6E3A72210C127009BED87 /* InstallmentPresenter.swift */,
 			);
 			path = Installment;
 			sourceTree = "<group>";
@@ -442,6 +466,7 @@
 				62A87000220FE84800CA6E68 /* Payment.storyboard in Resources */,
 				62A86FD2220FA23700CA6E68 /* Montserrat-Bold.ttf in Resources */,
 				62A86FF4220FCC8400CA6E68 /* Amount.storyboard in Resources */,
+				62B6E3A22210C0DA009BED87 /* Installment.storyboard in Resources */,
 				62A86FDB220FA23700CA6E68 /* Montserrat-ExtraBold.ttf in Resources */,
 				62E0E08E220F8C2500B6AC59 /* LaunchScreen.storyboard in Resources */,
 				62A86FD9220FA23700CA6E68 /* Montserrat-Black.ttf in Resources */,
@@ -449,6 +474,7 @@
 				62A86FD4220FA23700CA6E68 /* Montserrat-Regular.ttf in Resources */,
 				62A86FE2220FA23700CA6E68 /* Montserrat-Thin.ttf in Resources */,
 				62A86FE1220FA23700CA6E68 /* Montserrat-SemiBold.ttf in Resources */,
+				62B6E39A2210B104009BED87 /* CardIssuer.storyboard in Resources */,
 				62A86FE3220FA23700CA6E68 /* Montserrat-ThinItalic.ttf in Resources */,
 				62A86FD3220FA23700CA6E68 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
 				62E0E08B220F8C2500B6AC59 /* Assets.xcassets in Resources */,
@@ -576,16 +602,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62B6E3A82210C127009BED87 /* InstallmentPresenter.swift in Sources */,
 				62A86FF8220FCCA500CA6E68 /* AmountPresenter.swift in Sources */,
 				62A8700222109AE000CA6E68 /* PaymentTableViewCell.swift in Sources */,
+				62B6E3A02210B13C009BED87 /* CardIssuerTableViewCell.swift in Sources */,
 				62A86FFE220FE64E00CA6E68 /* PaymentPresenter.swift in Sources */,
+				62B6E3A62210C113009BED87 /* InstallmentViewController.swift in Sources */,
+				62B6E39E2210B129009BED87 /* CardIssuerPresenter.swift in Sources */,
 				62A86FED220FBE1E00CA6E68 /* CardIssuer.swift in Sources */,
 				62E0E084220F8C2200B6AC59 /* AppDelegate.swift in Sources */,
+				62B6E39C2210B117009BED87 /* CardIssuerViewController.swift in Sources */,
 				62A86FF6220FCC9200CA6E68 /* AmountViewController.swift in Sources */,
 				62A86FE7220FA94100CA6E68 /* Installment.swift in Sources */,
 				62A86FB5220F914400CA6E68 /* Extensions.swift in Sources */,
 				62A86FE9220FA94B00CA6E68 /* Payment.swift in Sources */,
 				62A86FFC220FE63900CA6E68 /* PaymentViewController.swift in Sources */,
+				62B6E3A42210C0F2009BED87 /* InstallmentTableViewCell.swift in Sources */,
 				62A86FE5220FA70800CA6E68 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

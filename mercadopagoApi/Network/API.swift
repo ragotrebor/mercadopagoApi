@@ -37,7 +37,8 @@ struct CardIssuerParamaters: Parameterizable {
 enum API {
     static let publicKey = "444a9ef5-8a6b-429f-abdf-587639155d88"
     static let baseUrl = "https://api.mercadopago.com/v1/payment_methods"
-    static let paymentUrl = ""
+    static let cardIssuersUrl = "\(baseUrl)/card_issuers"
+    static let installmentUrl = "\(baseUrl)/installments"
 }
 
 // MARK: - API Methods
@@ -71,7 +72,7 @@ extension API {
     
     static func getCardIssuers(paymentId: String, onResponse: CompletionHandler = nil, onSuccess: SuccessHandler<[CardIssuer]> = nil, onFailure: CompletionHandler = nil) {
         let parameters = CardIssuerParamaters(paymentId: paymentId).asParameters
-        Alamofire.request(baseUrl, method: .get, parameters: parameters ).responseArray  { (response: DataResponse<[CardIssuer]>) in
+        Alamofire.request(cardIssuersUrl, method: .get, parameters: parameters ).responseArray  { (response: DataResponse<[CardIssuer]>) in
 
             if let onResponse = onResponse {
                 onResponse()

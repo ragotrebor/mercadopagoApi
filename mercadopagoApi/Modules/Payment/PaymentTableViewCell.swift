@@ -21,7 +21,6 @@ class PaymentTableViewCell: UITableViewCell {
     
     @IBOutlet weak var paymentImageView: UIImageView! {
         didSet {
-            paymentImageView.backgroundColor = .borderColor
             paymentImageView.contentMode = .scaleAspectFit
         }
     }

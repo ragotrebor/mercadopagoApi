@@ -39,7 +39,6 @@ class PaymentPresenter: PaymentPresenterProcotol {
         let presenter: PaymentPresenterProcotol = PaymentPresenter()
         
         presenter.view = viewController
-        presenter.paymentData = PaymentData()
         viewController.presenter = presenter
         
         return viewController
@@ -71,8 +70,11 @@ class PaymentPresenter: PaymentPresenterProcotol {
         API.getPayments(onResponse: {
             self.view?.stopActivityIndicator()
         }, onSuccess: { (payments) in
-            self.payments = payments
-            self.view?.set(dataSource: payments)
+            let sortedPayments = payments.sorted(by: {
+                ($0.name ?? "") < ($1.name ?? "")
+            })
+            self.payments = sortedPayments
+            self.view?.set(dataSource: sortedPayments)
         }, onFailure: {
             self.view?.presentAlertView(type: .genericError)
         })
