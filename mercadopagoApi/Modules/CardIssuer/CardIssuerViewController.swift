@@ -24,6 +24,7 @@ class CardIssuerViewController: UIViewController {
             activityIndicator.hidesWhenStopped = true
         }
     }
+    
     var presenter: CardIssuerPresenterProcotol?
     
     var dataSource: [CardIssuer]? {

@@ -33,6 +33,26 @@ struct CardIssuerParamaters: Parameterizable {
     }
 }
 
+struct InstallmentParamaters: Parameterizable {
+    var amount: String?
+    var paymentId: String?
+    var issuerId: String?
+    
+    var asParameters: Parameters {
+        guard let paymentId = paymentId,
+            let amount = amount,
+            let issuerId = issuerId else {
+            return [:]
+        }
+        return [
+            "amount": amount,
+            "payment_method_id": paymentId,
+            "issuer.id": issuerId,
+            "public_key": API.publicKey
+        ]
+    }
+}
+
 // MARK : - API Vars
 enum API {
     static let publicKey = "444a9ef5-8a6b-429f-abdf-587639155d88"
@@ -96,11 +116,29 @@ extension API {
         }
     }
     
-    static func getInstallments(amount: String, paymentId: String, issuerId: String) {
-        Alamofire.request("https://eee.com/geo?lat=10.2&lng=10.2").responseObject { (response: DataResponse<Installment>) in
+    static func getInstallments(amount: String, paymentId: String, issuerId: String, onResponse: CompletionHandler = nil, onSuccess: SuccessHandler<[Installment]> = nil, onFailure: CompletionHandler = nil) {
+        let parameters = InstallmentParamaters(amount: amount, paymentId: paymentId, issuerId: issuerId).asParameters
+        Alamofire.request(installmentUrl, method: .get, parameters: parameters ).responseArray  { (response: DataResponse<[Installment]>) in
             
-            let installments = response.result.value
-            print(installments)
+            if let onResponse = onResponse {
+                onResponse()
+            }
+            
+            switch response.result {
+            case .success(let value):
+                guard let onSuccess = onSuccess else {
+                    return
+                }
+                
+                onSuccess(value)
+            case .failure:
+                guard let onFailure = onFailure else {
+                    return
+                }
+                
+                onFailure()
+                
+            }
         }
     }
 }

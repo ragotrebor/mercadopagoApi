@@ -28,7 +28,9 @@ extension AppDelegate {
         
         //let initialVc = PaymentPresenter.createModule()
         
-        let initialVc = CardIssuerPresenter.createModule()
+        //let initialVc = CardIssuerPresenter.createModule()
+        
+        let initialVc = InstallmentPresenter.createModule()
     
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = initialVc
