@@ -17,6 +17,7 @@ protocol InstallmentPresenterProcotol: AnyObject {
     func returnToAmount()
     func onViewDidLoad()
     func onInstallmentSelected(index: Int)
+    func onBackButtonTouched()
 }
 
 // MARK: - View Protocol
@@ -33,7 +34,7 @@ class InstallmentPresenter: InstallmentPresenterProcotol {
     var installments: [PayerCost]?
     
     static func createModule() -> InstallmentViewController {
-        let viewController = InstallmentViewController.storyboardViewController()
+        let viewController = InstallmentViewController.storyboardNavigationController().topViewController as! InstallmentViewController
         let presenter: InstallmentPresenterProcotol = InstallmentPresenter()
         
         presenter.view = viewController
@@ -43,10 +44,16 @@ class InstallmentPresenter: InstallmentPresenterProcotol {
     }
     
     func returnToAmount() {
-        
+        let vc = AmountPresenter.createModule()
+        guard let intallmentVc = vc.navigationController else {
+            return
+        }
+        intallmentVc.hero.modalAnimationType = .pull(direction: .right)
+        view?.present(intallmentVc, animated: true, completion: nil)
     }
     
     func onViewDidLoad() {
+        self.view?.setupNavigationBar(largeTitle: "Selección de cuotas")
         self.view?.startActivityIndicator()
         let paymentId = "visa"
         let amount = "20000"
@@ -69,8 +76,10 @@ class InstallmentPresenter: InstallmentPresenterProcotol {
     }
     
     func onInstallmentSelected(index: Int) {
-        
+        returnToAmount()
     }
     
-    
+    func onBackButtonTouched() {
+        self.view?.dismiss(animated: true, completion: nil)
+    }
 }

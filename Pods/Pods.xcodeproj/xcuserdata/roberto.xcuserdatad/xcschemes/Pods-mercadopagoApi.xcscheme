@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "47AB92943536878D2CBC9DCBCA0207C9"
+               BlueprintIdentifier = "C8925AAD7EE5349C364CCDAADFE05A42"
                BuildableName = "Pods_mercadopagoApi.framework"
                BlueprintName = "Pods-mercadopagoApi"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "47AB92943536878D2CBC9DCBCA0207C9"
+            BlueprintIdentifier = "C8925AAD7EE5349C364CCDAADFE05A42"
             BuildableName = "Pods_mercadopagoApi.framework"
             BlueprintName = "Pods-mercadopagoApi"
             ReferencedContainer = "container:Pods.xcodeproj">

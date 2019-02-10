@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Installment View Controller-->
+        <!--Title-->
         <scene sceneID="2CO-s5-fSq">
             <objects>
                 <viewController id="CEY-We-Uau" customClass="InstallmentViewController" customModule="mercadopagoApi" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QSr-RO-qP7">
-                                <rect key="frame" x="0.0" y="52" width="375" height="615"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="eAE-Gh-vVr">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -99,7 +99,7 @@
                                 </prototypes>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="k9o-Ju-xLW">
-                                <rect key="frame" x="177.5" y="349.5" width="20" height="20"/>
+                                <rect key="frame" x="177.5" y="333.5" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -107,14 +107,18 @@
                             <constraint firstItem="lLv-bY-Uae" firstAttribute="trailing" secondItem="QSr-RO-qP7" secondAttribute="trailing" id="9Nv-Dc-Ekh"/>
                             <constraint firstItem="QSr-RO-qP7" firstAttribute="leading" secondItem="lLv-bY-Uae" secondAttribute="leading" id="JPa-uH-iHK"/>
                             <constraint firstItem="k9o-Ju-xLW" firstAttribute="centerX" secondItem="QSr-RO-qP7" secondAttribute="centerX" id="UFL-gO-Y1O"/>
-                            <constraint firstItem="QSr-RO-qP7" firstAttribute="top" secondItem="lLv-bY-Uae" secondAttribute="top" constant="32" id="XYu-hJ-TEq"/>
+                            <constraint firstItem="QSr-RO-qP7" firstAttribute="top" secondItem="lLv-bY-Uae" secondAttribute="top" id="XYu-hJ-TEq"/>
                             <constraint firstItem="lLv-bY-Uae" firstAttribute="bottom" secondItem="QSr-RO-qP7" secondAttribute="bottom" id="lKJ-Qy-Zhw"/>
                             <constraint firstItem="k9o-Ju-xLW" firstAttribute="centerY" secondItem="QSr-RO-qP7" secondAttribute="centerY" id="uKN-Du-f6y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lLv-bY-Uae"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="7Ut-yi-iTb">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="Sj1-me-0YL"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="k9o-Ju-xLW" id="5bn-Eb-YNY"/>
+                        <outlet property="backButton" destination="Sj1-me-0YL" id="HfN-14-Uni"/>
                         <outlet property="installmentTableView" destination="QSr-RO-qP7" id="fMk-zp-5cX"/>
                         <outlet property="tableViewTotalLabel" destination="N6W-BE-bJt" id="Y4Y-De-w6d"/>
                     </connections>

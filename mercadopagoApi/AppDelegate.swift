@@ -24,13 +24,17 @@ extension AppDelegate {
     }
     
     func setInitialVc() {
-        //let initialVc = AmountPresenter.createModule()
+        let vc = AmountPresenter.createModule()
         
-        //let initialVc = PaymentPresenter.createModule()
+        //let vc = PaymentPresenter.createModule()
+    
+        //let vc = CardIssuerPresenter.createModule()
         
-        //let initialVc = CardIssuerPresenter.createModule()
+        //let vc = InstallmentPresenter.createModule()
         
-        let initialVc = InstallmentPresenter.createModule()
+        guard let initialVc = vc.navigationController else {
+            return
+        }
     
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = initialVc

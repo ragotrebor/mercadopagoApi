@@ -10,6 +10,7 @@ target 'mercadopagoApi' do
   pod 'ObjectMapper', '~> 3.4'
   pod 'AlamofireObjectMapper', '~> 5.2'
   pod 'Kingfisher', '~> 5.0'
+  pod 'Hero'
 
   target 'mercadopagoApiTests' do
     inherit! :search_paths

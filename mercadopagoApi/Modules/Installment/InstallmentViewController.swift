@@ -35,6 +35,13 @@ class InstallmentViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var backButton: UIBarButtonItem! {
+        didSet {
+            backButton.addTargetForAction(target: self,
+                                          action: #selector(backButtonTouched(sender:)))
+        }
+    }
+    
     var presenter: InstallmentPresenterProcotol?
     
     var dataSource: [PayerCost]? {
@@ -89,4 +96,11 @@ extension InstallmentViewController: InstallmentViewProtocol {
         tableViewTotalLabel.isHidden = false
     }
     
+}
+
+//MARK: - UI Event Handlers
+extension InstallmentViewController {
+    @objc func backButtonTouched(sender: UIButton) {
+        presenter?.onBackButtonTouched()
+    }
 }

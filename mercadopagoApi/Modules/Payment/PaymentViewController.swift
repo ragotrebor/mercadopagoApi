@@ -25,6 +25,14 @@ class PaymentViewController: UIViewController {
             activityIndicator.hidesWhenStopped = true
         }
     }
+    
+    @IBOutlet weak var backButton: UIBarButtonItem! {
+        didSet {
+            backButton.addTargetForAction(target: self,
+                                          action: #selector(backButtonTouched(sender:)))
+        }
+    }
+    
     var presenter: PaymentPresenterProcotol?
     
     var dataSource: [Payment]? {
@@ -32,6 +40,7 @@ class PaymentViewController: UIViewController {
             paymentTableView.reloadData()
         }
     }
+    
     
 }
 
@@ -79,4 +88,11 @@ extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
         presenter?.onPaymentMethodSelected(index: indexPath.row)
     }
     
+}
+
+//MARK: - UI Event Handlers
+extension PaymentViewController {
+    @objc func backButtonTouched(sender: UIButton) {
+        presenter?.onBackButtonTouched()
+    }
 }

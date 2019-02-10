@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Hero
 
 // MARK: - UIFont
 
@@ -73,6 +74,52 @@ extension String {
 // MARK: - ViewController
 
 extension UIViewController {
+    
+    enum NavigationBarColors {
+        case empty
+        case blue
+    }
+    
+    enum NavigationBarLeftButtonImage: String {
+        case back = "navBackArrow"
+    }
+    
+    func setupNavigationBar(navigationBarColor: NavigationBarColors = .blue, navigationBarLeftButtonImage: NavigationBarLeftButtonImage = .back, largeTitle: String? = nil) {
+        
+        guard let navigationController = self.navigationController else {
+            return
+        }
+        
+        let navigationBar = navigationController.navigationBar
+        
+        navigationBar.isTranslucent = false
+        navigationBar.shadowImage = UIImage()
+        
+        var barTintColor: UIColor?
+        
+        switch navigationBarColor {
+        case .empty:
+            navigationBar.setBackgroundImage(UIImage(), for: .default)
+            navigationBar.shadowImage = UIImage()
+            navigationBar.isTranslucent = true
+        case .blue:
+            barTintColor = UIColor.white
+            let leftImageName = navigationBarLeftButtonImage.rawValue
+            self.navigationItem.leftBarButtonItem?.image = UIImage(named: leftImageName)?.withRenderingMode(.alwaysTemplate)
+            
+            self.navigationItem.leftBarButtonItem?.tintColor = .secondaryColor
+        }
+        navigationBar.barTintColor = barTintColor
+        
+        if let largeTitle = largeTitle {
+            navigationBar.prefersLargeTitles = true
+            navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.primaryFontColor, NSAttributedString.Key.font: UIFont.h5Font]
+            self.navigationItem.largeTitleDisplayMode = .automatic
+            self.navigationItem.title = largeTitle
+            navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.primaryFontColor, NSAttributedString.Key.font: UIFont.body1]
+        }
+        
+    }
     
     enum AlertViewTypes {
         case emptyAlert
@@ -192,7 +239,10 @@ extension Storyboardable where Self: UIViewController {
     }
     
     static func storyboardNavigationController() -> UINavigationController {
-        return UINavigationController(rootViewController: storyboardViewController())
+        let nc = UINavigationController(rootViewController: storyboardViewController())
+        nc.hero.isEnabled = true
+        nc.hero.modalAnimationType = .autoReverse(presenting: .push(direction: .left))
+        return nc
     }
 }
 
@@ -269,3 +319,11 @@ extension UIView {
     }
 }
 
+// MARK: - UIBarButtonItem
+
+extension UIBarButtonItem {
+    func addTargetForAction(target: AnyObject, action: Selector) {
+        self.target = target
+        self.action = action
+    }
+}

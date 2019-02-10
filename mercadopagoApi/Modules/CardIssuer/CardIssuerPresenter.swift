@@ -17,6 +17,7 @@ protocol CardIssuerPresenterProcotol: AnyObject {
     func goToCardInstallments()
     func onViewDidLoad()
     func onCardIssuerSelected(index: Int)
+    func onBackButtonTouched()
 }
 
 // MARK: - View Protocol
@@ -33,7 +34,7 @@ class CardIssuerPresenter: CardIssuerPresenterProcotol {
     var cardIssuers: [CardIssuer]?
     
     static func createModule() -> CardIssuerViewController {
-        let viewController = CardIssuerViewController.storyboardViewController()
+        let viewController = CardIssuerViewController.storyboardNavigationController().topViewController as! CardIssuerViewController
         let presenter: CardIssuerPresenterProcotol = CardIssuerPresenter()
         
         presenter.view = viewController
@@ -43,29 +44,39 @@ class CardIssuerPresenter: CardIssuerPresenterProcotol {
     }
     
     func goToCardInstallments() {
-        
+        let vc = InstallmentPresenter.createModule()
+        guard let intallmentVc = vc.navigationController else {
+            return
+        }
+        view?.present(intallmentVc, animated: true, completion: nil)
     }
     
     func onViewDidLoad() {
+        self.view?.setupNavigationBar(largeTitle: "Emisor de tarjeta")
         self.view?.startActivityIndicator()
         let paymentId = "visa"
         API.getCardIssuers(paymentId: paymentId,
-        onResponse: {
-            self.view?.stopActivityIndicator()
-        }, onSuccess: { (cardIssuers) in
-            let sortedCardIssuers = cardIssuers.sorted(by: {
-                ($0.name ?? "") < ($1.name ?? "")
-            })
-            self.cardIssuers = cardIssuers
-            self.view?.set(dataSource: cardIssuers)
-        }, onFailure: {
-            self.view?.presentAlertView(type: .genericError)
-        })
+                            onResponse: {
+                                self.view?.stopActivityIndicator()
+                            },
+                            onSuccess: { (cardIssuers) in
+                                let sortedCardIssuers = cardIssuers.sorted(by: {
+                                    ($0.name ?? "") < ($1.name ?? "")
+                                })
+                                self.cardIssuers = sortedCardIssuers
+                                self.view?.set(dataSource: sortedCardIssuers)
+                            },
+                            onFailure: {
+                                self.view?.presentAlertView(type: .genericError)
+                            })
     }
     
     func onCardIssuerSelected(index: Int) {
-        
+        goToCardInstallments()
     }
     
+    func onBackButtonTouched() {
+        self.view?.dismiss(animated: true, completion: nil)
+    }
     
 }

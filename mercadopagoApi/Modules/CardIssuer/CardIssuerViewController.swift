@@ -25,6 +25,13 @@ class CardIssuerViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var backButton: UIBarButtonItem! {
+        didSet {
+            backButton.addTargetForAction(target: self,
+                                          action: #selector(backButtonTouched(sender:)))
+        }
+    }
+    
     var presenter: CardIssuerPresenterProcotol?
     
     var dataSource: [CardIssuer]? {
@@ -79,4 +86,11 @@ extension CardIssuerViewController: CardIssuerViewProtocol {
         activityIndicator.stopAnimating()
     }
     
+}
+
+//MARK: - UI Event Handlers
+extension CardIssuerViewController {
+    @objc func backButtonTouched(sender: UIButton) {
+        presenter?.onBackButtonTouched()
+    }
 }

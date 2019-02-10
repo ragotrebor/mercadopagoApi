@@ -19,6 +19,7 @@ protocol PaymentPresenterProcotol: AnyObject {
     func goToCardIssuer()
     func onViewDidLoad()
     func onPaymentMethodSelected(index: Int)
+    func onBackButtonTouched()
 }
 
 // MARK: - View Protocol
@@ -35,7 +36,7 @@ class PaymentPresenter: PaymentPresenterProcotol {
     var payments: [Payment]?
     
     static func createModule() -> PaymentViewController {
-        let viewController = PaymentViewController.storyboardViewController()
+        let viewController = PaymentViewController.storyboardNavigationController().topViewController as! PaymentViewController
         let presenter: PaymentPresenterProcotol = PaymentPresenter()
         
         presenter.view = viewController
@@ -45,7 +46,11 @@ class PaymentPresenter: PaymentPresenterProcotol {
     }
     
     func goToCardIssuer() {
-        
+        let vc = CardIssuerPresenter.createModule()
+        guard let cardIssuerVc = vc.navigationController else {
+            return
+        }
+        view?.present(cardIssuerVc, animated: true, completion: nil)
     }
     
     func onPaymentMethodSelected(index: Int) {
@@ -63,21 +68,29 @@ class PaymentPresenter: PaymentPresenterProcotol {
         paymentData?.paymentId = payment.id
         paymentData?.paymentName = payment.name
         paymentData?.paymentThumb = payment.thumbnail
+        
+        goToCardIssuer()
     }
     
     func onViewDidLoad() {
+        self.view?.setupNavigationBar(largeTitle: "Metodo de pago")
         self.view?.startActivityIndicator()
         API.getPayments(onResponse: {
-            self.view?.stopActivityIndicator()
-        }, onSuccess: { (payments) in
-            let sortedPayments = payments.sorted(by: {
-                ($0.name ?? "") < ($1.name ?? "")
-            })
-            self.payments = sortedPayments
-            self.view?.set(dataSource: sortedPayments)
-        }, onFailure: {
-            self.view?.presentAlertView(type: .genericError)
-        })
+                            self.view?.stopActivityIndicator()
+                        },
+                        onSuccess: { (payments) in
+                            let sortedPayments = payments.sorted(by: {
+                                ($0.name ?? "") < ($1.name ?? "")
+                            })
+                            self.payments = sortedPayments
+                            self.view?.set(dataSource: sortedPayments)
+                        },
+                        onFailure: {
+                            self.view?.presentAlertView(type: .genericError)
+                        })
     }
     
+    func onBackButtonTouched() {
+        self.view?.dismiss(animated: true, completion: nil)
+    }
 }

@@ -66,6 +66,7 @@ class AmountViewController: HideableKeyboardUIViewController {
 extension AmountViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter?.onViewDidLoad()
     }
 }
 

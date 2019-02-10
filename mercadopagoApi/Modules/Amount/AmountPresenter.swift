@@ -27,6 +27,7 @@ protocol AmountPresenterProcotol: AnyObject {
     static func createModule() -> AmountViewController
     func goToPayment()
     func onAmountContinueButtonPressed(amount: String)
+    func onViewDidLoad()
 }
 
 // MARK: - View Protocol
@@ -43,7 +44,7 @@ class AmountPresenter: AmountPresenterProcotol {
     var paymentData: PaymentData?
     
     static func createModule() -> AmountViewController {
-        let viewController = AmountViewController.storyboardViewController()
+        let viewController = AmountViewController.storyboardNavigationController().topViewController as! AmountViewController
         let presenter: AmountPresenterProcotol = AmountPresenter()
         
         presenter.view = viewController
@@ -54,10 +55,11 @@ class AmountPresenter: AmountPresenterProcotol {
     }
     
     func goToPayment() {
-        let paymentVc = PaymentPresenter.createModule()
-        paymentVc.presenter?.paymentData = paymentData
+        let vc = PaymentPresenter.createModule()
+        guard let paymentVc = vc.navigationController else {
+            return
+        }
         view?.present(paymentVc, animated: true, completion: nil)
-        
     }
     
     func onAmountContinueButtonPressed(amount: String) {
@@ -73,6 +75,8 @@ class AmountPresenter: AmountPresenterProcotol {
         paymentData?.amount = amount
         goToPayment()
     }
-    
+    func onViewDidLoad() {
+        self.view?.setupNavigationBar(navigationBarColor: .empty)
+    }
     
 }

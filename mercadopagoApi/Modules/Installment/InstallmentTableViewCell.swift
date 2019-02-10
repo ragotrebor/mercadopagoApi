@@ -54,7 +54,6 @@ extension InstallmentTableViewCell {
 extension InstallmentTableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
     }
     
     func configureCell() {
