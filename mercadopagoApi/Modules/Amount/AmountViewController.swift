@@ -130,7 +130,7 @@ extension AmountViewController: AmountViewProtocol {
         cardPaymentMethodLabel.text = paymentData.paymentName
         cardIssuerLabel.text = paymentData.issuerName
         cardInstallmentMessageLabel.text = paymentData.installmentMessage
-        cardInstallmentTotalLabel.text = "Total: \(paymentData.installmentTotal ?? "0")"
+        cardInstallmentTotalLabel.text = "Total: $\(paymentData.installmentTotal ?? "0")"
     }
     
     func hideResumeCard() {

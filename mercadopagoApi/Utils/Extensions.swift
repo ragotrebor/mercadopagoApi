@@ -69,8 +69,8 @@ extension String {
     static let defaultAlertMessage = "Ha ocurrido un error, vuelta a intentar más tarde"
     static let cancel = "Cancelar"
     static let ok = "OK"
-    static let emptyPayments = "No se encontraron metodos de pago"
-    static let emptyCardIssuers = "No se encontraron emisores de tarjerta"
+    static let emptyPayments = "No se encontraron métodos de pago"
+    static let emptyCardIssuers = "No se encontraron emisores de la tarjeta seleccionada"
     static let emptyInstallments = "No se encontraron cuotas para el monto seleccionado"
 }
 

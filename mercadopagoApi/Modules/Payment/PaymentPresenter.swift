@@ -72,7 +72,7 @@ class PaymentPresenter: PaymentPresenterProcotol {
     }
     
     func onViewDidLoad() {
-        self.view?.setupNavigationBar(largeTitle: "Metodo de pago")
+        self.view?.setupNavigationBar(largeTitle: "Método de pago")
         self.view?.startActivityIndicator()
         API.getPayments(onResponse: {
                             self.view?.stopActivityIndicator()
