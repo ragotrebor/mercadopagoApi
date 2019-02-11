@@ -7,8 +7,13 @@ Se utilizó arquitectura MVP para mejor separación de las capas lógicas y auto
 Las librerías utilizadas son:
 
 Alamofire: Networking
+
 ObjectMapper: Parsing reponse json a objeto
+
 Hero: Manejo de transiciones entre vistas
+
 KingFisher: Networking y cache de imagenes.
+
+
 
 
