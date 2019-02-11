@@ -13,7 +13,7 @@ protocol InstallmentPresenterProcotol: AnyObject {
     var paymentData: PaymentData? {get set}
     var installments: [PayerCost]? {get set}
     
-    static func createModule() -> InstallmentViewController
+    static func createModule(paymentData: PaymentData) -> InstallmentViewController
     func returnToAmount()
     func onViewDidLoad()
     func onInstallmentSelected(index: Int)
@@ -33,18 +33,22 @@ class InstallmentPresenter: InstallmentPresenterProcotol {
     var paymentData: PaymentData?
     var installments: [PayerCost]?
     
-    static func createModule() -> InstallmentViewController {
+    static func createModule(paymentData: PaymentData) -> InstallmentViewController {
         let viewController = InstallmentViewController.storyboardNavigationController().topViewController as! InstallmentViewController
         let presenter: InstallmentPresenterProcotol = InstallmentPresenter()
         
         presenter.view = viewController
+        presenter.paymentData = paymentData
         viewController.presenter = presenter
         
         return viewController
     }
     
     func returnToAmount() {
-        let vc = AmountPresenter.createModule()
+        guard let paymentData = paymentData else {
+            return
+        }
+        let vc = AmountPresenter.createModule(paymentData: paymentData)
         guard let intallmentVc = vc.navigationController else {
             return
         }
@@ -55,9 +59,14 @@ class InstallmentPresenter: InstallmentPresenterProcotol {
     func onViewDidLoad() {
         self.view?.setupNavigationBar(largeTitle: "Selección de cuotas")
         self.view?.startActivityIndicator()
-        let paymentId = "visa"
-        let amount = "20000"
-        let issuerId = "288"
+        
+        guard let paymentData = paymentData,
+            let paymentId = paymentData.paymentId,
+            let issuerId = paymentData.issuerId,
+            let amount = paymentData.amount else {
+                return
+        }
+        
         API.getInstallments(amount: amount,
                             paymentId: paymentId,
                             issuerId: issuerId,
@@ -66,6 +75,7 @@ class InstallmentPresenter: InstallmentPresenterProcotol {
                             }, onSuccess: { (installments) in
                                 guard let installment = installments.first,
                                     let payerCosts = installment.payerCosts else {
+                                    self.view?.set(dataSource: [PayerCost]())
                                     return
                                 }
                                 self.installments = payerCosts
@@ -76,6 +86,14 @@ class InstallmentPresenter: InstallmentPresenterProcotol {
     }
     
     func onInstallmentSelected(index: Int) {
+        guard let installments = installments else {
+            return
+        }
+        
+        let installment = installments[index]
+        
+        paymentData?.installmentMessage = installment.recommendedMessage
+        paymentData?.installmentTotal = String(installment.totalAmount ?? 0)
         returnToAmount()
     }
     

@@ -16,6 +16,8 @@ struct PaymentData {
     var issuerId: String?
     var issuerName: String?
     var issuerThumb: String?
+    var installmentMessage: String?
+    var installmentTotal: String?
 }
 
 // MARK: - Presenter Protocol
@@ -24,7 +26,7 @@ protocol AmountPresenterProcotol: AnyObject {
     var view: AmountViewController? {get set}
     var paymentData: PaymentData? {get set}
     
-    static func createModule() -> AmountViewController
+    static func createModule(paymentData: PaymentData) -> AmountViewController
     func goToPayment()
     func onAmountContinueButtonPressed(amount: String)
     func onViewDidLoad()
@@ -33,6 +35,8 @@ protocol AmountPresenterProcotol: AnyObject {
 // MARK: - View Protocol
 
 protocol AmountViewProtocol: AnyObject {
+    func displayResumeCard(paymentData: PaymentData)
+    func hideResumeCard()
     func displayAmountInputError(message: String)
 }
 
@@ -43,19 +47,22 @@ class AmountPresenter: AmountPresenterProcotol {
     
     var paymentData: PaymentData?
     
-    static func createModule() -> AmountViewController {
+    static func createModule(paymentData: PaymentData) -> AmountViewController {
         let viewController = AmountViewController.storyboardNavigationController().topViewController as! AmountViewController
         let presenter: AmountPresenterProcotol = AmountPresenter()
         
         presenter.view = viewController
-        presenter.paymentData = PaymentData()
+        presenter.paymentData = paymentData
         viewController.presenter = presenter
         
         return viewController
     }
     
     func goToPayment() {
-        let vc = PaymentPresenter.createModule()
+        guard let paymentData = paymentData else {
+            return
+        }
+        let vc = PaymentPresenter.createModule(paymentData: paymentData)
         guard let paymentVc = vc.navigationController else {
             return
         }
@@ -76,6 +83,14 @@ class AmountPresenter: AmountPresenterProcotol {
         goToPayment()
     }
     func onViewDidLoad() {
+        if let paymentData = paymentData,
+            let installmentMessage = paymentData.installmentMessage,
+            !installmentMessage.isEmpty {
+            self.view?.displayResumeCard(paymentData: paymentData)
+        } else {
+            self.view?.hideResumeCard()
+        }
+            
         self.view?.setupNavigationBar(navigationBarColor: .empty)
     }
     

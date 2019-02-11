@@ -24,7 +24,8 @@ extension AppDelegate {
     }
     
     func setInitialVc() {
-        let vc = AmountPresenter.createModule()
+        let paymentData = PaymentData()
+        let vc = AmountPresenter.createModule(paymentData: paymentData)
         
         //let vc = PaymentPresenter.createModule()
     

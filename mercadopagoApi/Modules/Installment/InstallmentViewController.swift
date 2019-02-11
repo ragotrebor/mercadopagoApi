@@ -62,7 +62,17 @@ extension InstallmentViewController {
 // MARK: - Tableview methods
 extension InstallmentViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource?.count ?? 0
+        tableViewTotalLabel.isHidden = true
+        guard let dataSource = dataSource else {
+            return 0
+        }
+        if dataSource.count == 0 {
+            tableView.setEmptyMessage(.emptyInstallments)
+        } else {
+            tableView.restore()
+            tableViewTotalLabel.isHidden = false
+        }
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -93,7 +103,6 @@ extension InstallmentViewController: InstallmentViewProtocol {
     
     func stopActivityIndicator() {
         activityIndicator.stopAnimating()
-        tableViewTotalLabel.isHidden = false
     }
     
 }

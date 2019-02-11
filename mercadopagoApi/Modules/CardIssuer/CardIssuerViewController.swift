@@ -53,7 +53,15 @@ extension CardIssuerViewController {
 // MARK: - Tableview methods
 extension CardIssuerViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource?.count ?? 0
+        guard let dataSource = dataSource else {
+            return 0
+        }
+        if dataSource.count == 0 {
+            tableView.setEmptyMessage(.emptyCardIssuers)
+        } else {
+            tableView.restore()
+        }
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

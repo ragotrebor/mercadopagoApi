@@ -69,6 +69,9 @@ extension String {
     static let defaultAlertMessage = "Ha ocurrido un error, vuelta a intentar más tarde"
     static let cancel = "Cancelar"
     static let ok = "OK"
+    static let emptyPayments = "No se encontraron metodos de pago"
+    static let emptyCardIssuers = "No se encontraron emisores de tarjerta"
+    static let emptyInstallments = "No se encontraron cuotas para el monto seleccionado"
 }
 
 // MARK: - ViewController
@@ -325,5 +328,26 @@ extension UIBarButtonItem {
     func addTargetForAction(target: AnyObject, action: Selector) {
         self.target = target
         self.action = action
+    }
+}
+
+// MARK: - UITableView
+
+extension UITableView {
+    
+    func setEmptyMessage(_ message: String) {
+        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width * 0.75, height: self.bounds.size.height))
+        messageLabel.text = message
+        messageLabel.textColor = .secondaryFontColor
+        messageLabel.numberOfLines = 0;
+        messageLabel.textAlignment = .center;
+        messageLabel.font = .body1
+        messageLabel.sizeToFit()
+        
+        self.backgroundView = messageLabel
+    }
+    
+    func restore() {
+        self.backgroundView = nil
     }
 }

@@ -13,7 +13,7 @@ protocol CardIssuerPresenterProcotol: AnyObject {
     var paymentData: PaymentData? {get set}
     var cardIssuers: [CardIssuer]? {get set}
     
-    static func createModule() -> CardIssuerViewController
+    static func createModule(paymentData: PaymentData) -> CardIssuerViewController
     func goToCardInstallments()
     func onViewDidLoad()
     func onCardIssuerSelected(index: Int)
@@ -33,18 +33,22 @@ class CardIssuerPresenter: CardIssuerPresenterProcotol {
     var paymentData: PaymentData?
     var cardIssuers: [CardIssuer]?
     
-    static func createModule() -> CardIssuerViewController {
+    static func createModule(paymentData: PaymentData) -> CardIssuerViewController {
         let viewController = CardIssuerViewController.storyboardNavigationController().topViewController as! CardIssuerViewController
         let presenter: CardIssuerPresenterProcotol = CardIssuerPresenter()
         
         presenter.view = viewController
+        presenter.paymentData = paymentData
         viewController.presenter = presenter
         
         return viewController
     }
     
     func goToCardInstallments() {
-        let vc = InstallmentPresenter.createModule()
+        guard let paymentData = paymentData else {
+            return
+        }
+        let vc = InstallmentPresenter.createModule(paymentData: paymentData)
         guard let intallmentVc = vc.navigationController else {
             return
         }
@@ -54,7 +58,10 @@ class CardIssuerPresenter: CardIssuerPresenterProcotol {
     func onViewDidLoad() {
         self.view?.setupNavigationBar(largeTitle: "Emisor de tarjeta")
         self.view?.startActivityIndicator()
-        let paymentId = "visa"
+        guard let paymentData = paymentData,
+            let paymentId = paymentData.paymentId else {
+                return
+        }
         API.getCardIssuers(paymentId: paymentId,
                             onResponse: {
                                 self.view?.stopActivityIndicator()
@@ -72,6 +79,16 @@ class CardIssuerPresenter: CardIssuerPresenterProcotol {
     }
     
     func onCardIssuerSelected(index: Int) {
+        guard let cardIssuers = cardIssuers else {
+            return
+        }
+        
+        let cardIssuer = cardIssuers[index]
+        
+        paymentData?.issuerId = cardIssuer.id
+        paymentData?.issuerName = cardIssuer.name
+        paymentData?.issuerThumb = cardIssuer.thumbnail
+        
         goToCardInstallments()
     }
     

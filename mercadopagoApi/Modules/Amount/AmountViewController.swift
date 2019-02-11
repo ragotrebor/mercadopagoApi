@@ -59,6 +59,58 @@ class AmountViewController: HideableKeyboardUIViewController {
             )
         }
     }
+    
+    @IBOutlet weak var resumeCardView: UIView! {
+        didSet {
+            resumeCardView.cornerRadius = 4
+            resumeCardView.borderColor = .borderColor
+            resumeCardView.borderWidth = 1
+        }
+    }
+    
+    @IBOutlet weak var resumeTitleLabel: UILabel! {
+        didSet {
+            resumeTitleLabel.font = .h6Font
+            resumeTitleLabel.textColor = .primaryFontColor
+            resumeTitleLabel.text = "Resumen de pago"
+        }
+    }
+    
+    @IBOutlet weak var cardPaymentMethodLabel: UILabel! {
+        didSet {
+            cardPaymentMethodLabel.font = .body2
+            cardPaymentMethodLabel.textColor = .primaryFontColor
+            cardPaymentMethodLabel.text = ""
+            cardPaymentMethodLabel.numberOfLines = 0
+        }
+    }
+    
+    @IBOutlet weak var cardIssuerLabel: UILabel! {
+        didSet {
+            cardIssuerLabel.font = .body2
+            cardIssuerLabel.textColor = .primaryFontColor
+            cardIssuerLabel.text = ""
+            cardIssuerLabel.numberOfLines = 0
+        }
+    }
+    @IBOutlet weak var cardInstallmentMessageLabel: UILabel! {
+        didSet {
+            cardInstallmentMessageLabel.font = .body2
+            cardInstallmentMessageLabel.textColor = .primaryFontColor
+            cardInstallmentMessageLabel.text = ""
+            cardInstallmentMessageLabel.numberOfLines = 0
+        }
+    }
+    @IBOutlet weak var cardInstallmentTotalLabel: UILabel!  {
+        didSet {
+            cardInstallmentTotalLabel.font = .body2
+            cardInstallmentTotalLabel.textColor = .primaryFontColor
+            cardInstallmentTotalLabel.text = ""
+            cardInstallmentTotalLabel.numberOfLines = 0
+        }
+    }
+    
+    
     var presenter: AmountPresenterProcotol?
 }
 
@@ -72,6 +124,19 @@ extension AmountViewController {
 
 // MARK: - View
 extension AmountViewController: AmountViewProtocol {
+    func displayResumeCard(paymentData: PaymentData) {
+        resumeCardView.isHidden = false
+        amountInputTextField.text = paymentData.amount
+        cardPaymentMethodLabel.text = paymentData.paymentName
+        cardIssuerLabel.text = paymentData.issuerName
+        cardInstallmentMessageLabel.text = paymentData.installmentMessage
+        cardInstallmentTotalLabel.text = "Total: \(paymentData.installmentTotal)"
+    }
+    
+    func hideResumeCard() {
+        resumeCardView.isHidden = true
+    }
+    
     func displayAmountInputError(message: String) {
         amountInputErrorLabel.displayText(message)
     }

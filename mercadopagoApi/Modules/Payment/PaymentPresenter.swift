@@ -15,7 +15,7 @@ protocol PaymentPresenterProcotol: AnyObject {
     var paymentData: PaymentData? {get set}
     var payments: [Payment]? {get set}
     
-    static func createModule() -> PaymentViewController
+    static func createModule(paymentData: PaymentData) -> PaymentViewController
     func goToCardIssuer()
     func onViewDidLoad()
     func onPaymentMethodSelected(index: Int)
@@ -35,10 +35,11 @@ class PaymentPresenter: PaymentPresenterProcotol {
     var paymentData: PaymentData?
     var payments: [Payment]?
     
-    static func createModule() -> PaymentViewController {
+    static func createModule(paymentData: PaymentData) -> PaymentViewController {
         let viewController = PaymentViewController.storyboardNavigationController().topViewController as! PaymentViewController
         let presenter: PaymentPresenterProcotol = PaymentPresenter()
         
+        presenter.paymentData = paymentData
         presenter.view = viewController
         viewController.presenter = presenter
         
@@ -46,7 +47,10 @@ class PaymentPresenter: PaymentPresenterProcotol {
     }
     
     func goToCardIssuer() {
-        let vc = CardIssuerPresenter.createModule()
+        guard let paymentData = paymentData else {
+            return
+        }
+        let vc = CardIssuerPresenter.createModule(paymentData: paymentData)
         guard let cardIssuerVc = vc.navigationController else {
             return
         }
@@ -59,11 +63,6 @@ class PaymentPresenter: PaymentPresenterProcotol {
         }
 
         let payment = payments[index]
-        
-        //DEBUG
-        paymentData = PaymentData()
-        paymentData?.amount = "20000"
-        //DEBUG
         
         paymentData?.paymentId = payment.id
         paymentData?.paymentName = payment.name
