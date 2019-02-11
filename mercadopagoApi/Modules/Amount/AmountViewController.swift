@@ -130,7 +130,7 @@ extension AmountViewController: AmountViewProtocol {
         cardPaymentMethodLabel.text = paymentData.paymentName
         cardIssuerLabel.text = paymentData.issuerName
         cardInstallmentMessageLabel.text = paymentData.installmentMessage
-        cardInstallmentTotalLabel.text = "Total: \(paymentData.installmentTotal)"
+        cardInstallmentTotalLabel.text = "Total: \(paymentData.installmentTotal ?? "0")"
     }
     
     func hideResumeCard() {
@@ -150,6 +150,7 @@ extension AmountViewController {
         guard let amount = amountInputTextField.text else {
             return
         }
+        self.dismissKeyboard()
         presenter?.onAmountContinueButtonPressed(amount: amount)
     }
 }
